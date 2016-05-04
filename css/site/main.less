@@ -1,0 +1,12 @@
+body {
+	
+}
+a{
+	&[href^="mailto:"],
+	&[href^="tel:"]{
+		text-decoration: none;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}

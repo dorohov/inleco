@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU">
+<head>
+<meta charset="utf-8">
+<title>fancybox</title>
+
+<link rel="stylesheet" type="text/css" href="./plugins/fslider/fractionslider.css"  />
+<link rel="stylesheet" type="text/css" href="./plugins/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+<link rel="stylesheet" type="text/css" href="./plugins/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+
+<script src="./js/jquery-1.9.0.min.js"></script>
+
+<script src="./plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="./plugins/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+<script src="./plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script>
+$(document).ready(function() {
+	$('.fancybox').fancybox();
+	
+	$('.fancybox-buttons').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+
+		prevEffect : 'none',
+		nextEffect : 'none',
+
+		closeBtn  : false,
+
+		helpers : {
+			title : {
+				type : 'inside'
+			},
+			buttons	: {}
+		},
+
+		afterLoad : function() {
+			this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+		}
+	});
+});
+</script>
+<!--[if lt IE 9]> 
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+<![endif]-->
+</head>
+<body>
+
+<section id="outer">
+	<a class="fancybox-buttons" data-fancybox-group="button" href="./images/slide1.jpg"><img src="./images/slide1.jpg" alt="" /></a>
+</section>
+</body>
+</html>

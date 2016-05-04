@@ -1,0 +1,85 @@
+@url-site:'';
+@url-path:'/wp-content/themes/azbnbasetheme';
+@url-path:'';
+@url-path-css:'@{url-path}/css';
+@url-path-fonts:'@{url-path}/fonts';
+@url-path-img:'@{url-path}/img';
+@url-path-js:'@{url-path}/js';
+
+@white:			#fff;
+@black: 		#000;
+@header-color:	#c8e5f6;
+@blue: 			#026eae;
+@blue2: 		#0075b9;
+@blue3: 		#0077bf;
+
+@grid_element: 15px;
+@grid_margin: -(@grid_element);
+@grid_padding: @grid_element;
+
+@transition-site: all 0.3s ease;
+@media-size-xs: ~"(max-width: 767px)";
+@media-size-xs-6: ~"(min-width: 375px) and (max-width: 767px)";
+@media-size-xs-6-l: ~"(min-width: 490px) and (max-width: 767px) and (orientation:landscape)";
+@media-size-xs-p: ~"(max-width: 767px) and (orientation:portrait)";
+@media-size-xs-l: ~"(max-width: 767px) and (orientation:landscape)";
+@media-no-phone: ~"(min-width: 768px)";
+@media-size-sm: ~"(min-width: 768px) and (max-width: 1024px)";
+@media-size-sm-p: ~"(min-width: 768px) and (max-width: 1024px) and (orientation:portrait)";
+@media-size-sm-l: ~"(min-width: 768px) and (max-width: 1024px) and (orientation:landscape)";
+
+@media-screen: ~"(min-width: 1025px)";
+@media-size-md: ~"(min-width: 1025px) and (max-width: 1199px)";
+@media-size-lg: ~"(min-width: 1200px)";
+//@media-size-xl: ~"(min-width: 1400px)";
+
+#site {
+	.bi(@img:'') {
+		background-image:url('@{url-path-img}/@{img}');
+	}
+	.bg(@color:#ffffff) {
+		background-color:@color;
+	}
+	.bpos(@pos:center center) {
+		background-position:@pos;
+	}
+	.brep(@rep:no-repeat) {
+		background-repeat:@rep;
+	}
+	.bsize(@s:initial) {
+		background-size:@s;
+	}
+	.color(@color:#ffffff) {
+		color:@color;
+	}
+	.underline(@val:underline) {
+		text-decoration:@val;
+	}
+	.uppercase(@val:uppercase) {
+		text-transform:@val;
+	}
+	.size(@val:10px) {
+		font-size:@val;
+	}
+	.bold(@val:bold) {
+		font-weight:@val;
+	}
+	.italic(@val:italic) {
+		font-style:@val;
+	}
+	.z(@val:1) {
+		z-index:@val;
+	}
+	.lh(@val:1em) {
+		line-height:@val;
+	}
+	.ff(@val:Arial) {
+		font-family:@val;
+	}
+	.w(@val:0px) {
+		width:@val;
+	}
+	.h(@val:0px) {
+		height:@val;
+	}
+}
