@@ -1,5 +1,8 @@
 body {
-	
+	font-family: @proxima-light;
+	font-size: 18px;
+	line-height: 30px;
+	color: lighten(@black, 12.5); //#202020
 }
 a{
 	&[href^="mailto:"],
@@ -8,5 +11,62 @@ a{
 		&:hover{
 			text-decoration: none;
 		}
+	}
+}
+._cb__flex{
+	display: flex;
+	&._col{
+		margin-right: @grid_margin;
+		margin-left:  @grid_margin;
+		._cb__col{
+			padding-right: @grid_padding;
+			padding-left:  @grid_padding;
+		}
+	}
+}
+.btn-line{
+	display: inline-block;
+	text-decoration: none;
+	outline: none;
+	background: none;
+	border: 1px solid #5d93a3;
+	text-transform: uppercase;
+	font-family: @proxima;
+	line-height: 54px;    
+	font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 0 40px;
+    margin-left: 10px;    
+    transition: @transition-site;
+    position: relative;
+    color: #222222;
+    &:before,
+    &:after{
+    	content: '';
+    	height: 1px;
+    	width: 15px;
+    	position: absolute;
+    	top: 50%;
+    	background: #5d93a3;
+    	transition: @transition-site;
+    }
+    &:before{left: -11px;}
+    &:after{right: -11px;}
+	&:hover{
+		text-decoration: none;
+		outline: none;
+		color: @black;
+		border-color: darken(#5d93a3, 15%);
+	    &:before,
+	    &:after{
+   			width: 25px;
+			background: darken(#5d93a3, 15%);
+   		}
+	    &:before{left: -25px;}
+	    &:after{right: -25px;}
+	}
+	&:focus{
+		text-decoration: none;
+		outline: none;
 	}
 }

@@ -1,0 +1,134 @@
+._czr__index-product{
+	//opacity: @opacity;
+	background: url('@{url-path-img}/index/bg-product.jpg') no-repeat left top;
+	color: lighten(@black, 6.2); //#101010
+}
+._czr__ip-carousel{
+}
+._czr__ip-item{	
+	min-height: 750px;   
+}
+._czr__ip-img{
+	width: 48%;
+	position: relative;
+	img{
+		top: 109px;
+		right: 205px;
+		position: absolute;
+	}
+}
+._czr__ip-note{
+	width: 52%; 
+	display: flex;
+    align-items: center;
+}
+._czr__ip-note-flex{
+	max-width: 600px;
+	//transform: translateY(-13px);
+}
+._czr__ip-note-inner{	
+	border-bottom: 1px solid #5d93a3;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+}
+._czr__ip-note-heading{
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 15px;
+}
+._czr__ip-param{
+	font-family: @proxima-thin;
+	color:  #222222;
+	font-size: 26px;
+	line-height: 28px;
+	margin-bottom: 40px;
+}
+._czr__ip-param-dia{
+	span{		
+		display: inline-block;
+		margin: 0px 5px 0 13px;
+		vertical-align: middle;
+	}
+}
+._czr__ip-param-ruler{
+	&:before{
+		font-family: @icon;
+		content: @icon-ruler1;
+		transform: rotate(-90deg);
+    	display: inline-block;
+    	margin-right: 20px;
+    	margin-left: 10px;
+    	color: #5d93a3;
+	}
+}
+._czr__ip-control{
+	position: absolute;
+	top: 50%;
+	display: flex;
+	align-items: center;
+	transform: translateY(-50%);
+	text-decoration: none;
+    color: @black;
+    transition: @transition-site;
+    img{
+    	transition: @transition-site;
+    }
+	&:hover{
+   		color: @black;
+    	text-decoration: none;
+    	img{
+    		transform: scale(1.1);
+    	}
+	}
+	&:focus{
+		color: @black;
+		text-decoration: none;
+	}
+}
+._czr__ip-prev{
+	left: 20px;
+	._czr__ip-control-note{
+		span{
+			text-align: left;
+			left: -150%;
+		} 
+		padding-left: 10px;  
+	}
+	&:hover{
+		._czr__ip-control-note{
+			span{
+				left: 0%;
+			} 
+		}
+	}
+}
+._czr__ip-next{
+	right: 20px;
+	._czr__ip-control-note{
+		span{
+			text-align: right;
+			right: -150%;
+		} 
+		padding-right: 15px;  
+	}
+	&:hover{
+		._czr__ip-control-note{
+			span{
+				right: 0%;
+			} 
+		}
+	}	
+}
+._czr__ip-control-note{
+	overflow: hidden;
+	position: relative;
+    font-size: 18px;
+    font-family: @proxima-thin;   
+    max-width: 150px;
+    line-height: 24px;
+    span{
+		position: relative;
+		display: block;
+    	transition: @transition-site;
+    }
+}

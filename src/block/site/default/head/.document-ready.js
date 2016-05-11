@@ -1,7 +1,7 @@
 $('img').addClass('img-responsive');
 var url = window.location.pathname;
-$('.navbar-nav a[href="'+url+'"]').parent().addClass('active');
-
+$('.navbar-nav a[href="'+url+'"]').parent().addClass('active'); 
+$('._czr__ip-carousel .item').eq(0).addClass('active'); 
 /*
 $('._fs__nav-item a[href="'+url+'"]').parent().addClass('active');
 $('._ncb__nav a[href="'+url+'"]').parent().addClass('active');

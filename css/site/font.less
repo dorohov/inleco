@@ -1,5 +1,17 @@
-/*
-.include-custom-font(@family: @agora-reg, @weight: normal, @style: normal){
+@proxima: 			proxima_nova_regular-webfont;
+@proxima-bold: 		proxima_nova_bold-webfont;
+@proxima-light: 	proxima_nova_light-webfont;
+@proxima-thin: 		ProximaNovaT-Thin;
+
+@regal: 			pfregaldisplaypro-regular;
+@regal-med: 		pfregaldisplaypro-medium;
+@regal-bold: 		pfregaldisplaypro-bold;
+
+@minion-pro:	 	MinionPro-Regular;
+
+@icon:	 			Flaticon;
+
+.include-custom-font(@family: @proxima, @weight: normal, @style: normal){
 	@font-face{			
 		font-family: "@{family}";			
 		src:url('@{url-path-fonts}/@{family}.eot');
@@ -11,13 +23,45 @@
 		font-style: @style;		
 	}
 }
+/*proxima nova*/
+.include-custom-font(@family: @proxima, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @proxima-bold, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @proxima-light, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @proxima-thin, 	@weight: normal, @style: normal);
+/* end's proxima nova*/
+/*MinionPro*/
+.include-custom-font(@family: @minion-pro, 		@weight: normal, @style: normal);
+/* end's MinionPro*/
+/*pf regal display pro*/
+.include-custom-font(@family: @regal, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @regal-med, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @regal-bold, 	@weight: normal, @style: normal);
+/* end's pf regal display pro*/
+.include-custom-font(@family: @icon, 		@weight: normal, @style: normal);
 
-.include-custom-font(@family: @agora-reg, @weight: normal, @style: normal);
- 
-.mixin-headings(@font-family: @agora-reg, @font-size: 20px, @line-height: 26px, @color: @black){
+.mixin-headings(@font-family: @proxima, @font-size: 20px, @line-height: 26px, @color: @black){
 	font-family: @font-family;
 	font-size: @font-size;
 	line-height: @line-height;
 	color: @color;
 } 
-*/
+
+
+@icon-arrow-bottom: 	"\f100"; 
+@icon-arrow-down: 		"\f101"; 
+@icon-arrow-top: 		"\f102"; 
+@icon-calendar: 		"\f103"; 
+@icon-clock1: 			"\f104"; 
+@icon-clock2: 			"\f105"; 
+@icon-close: 			"\f106"; 
+@icon-fb: 				"\f107"; 
+@icon-mail: 			"\f108"; 
+@icon-map: 				"\f109"; 
+@icon-next: 			"\f10a"; 
+@icon-ok: 				"\f10b"; 
+@icon-phone: 			"\f10c"; 
+@icon-prev: 			"\f10d"; 
+@icon-ruler1: 			"\f10e"; 
+@icon-ruler2: 			"\f10f"; 
+@icon-tw: 				"\f110"; 
+@icon-vk: 				"\f111"; 
