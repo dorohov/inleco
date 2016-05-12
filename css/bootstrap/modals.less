@@ -30,24 +30,24 @@
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    .translate(0, -25%);
-    .transition-transform(~"0.3s ease-out");
+    .translate(-25%, 0%);
+    .transition-transform(~"0.5s ease");
   }
   &.in .modal-dialog { .translate(0, 0) }
 }
 .modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   position: relative;
-  width: auto;
-  margin: 10px;
+  //width: auto;
+  //margin: 10px;
 }
 
 // Actual modal
+/*
 .modal-content {
   position: relative;
   background-color: @modal-content-bg;
@@ -58,7 +58,7 @@
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
-}
+}*/
 
 // Modal background
 .modal-backdrop {
@@ -94,11 +94,12 @@
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
+/*
 .modal-body {
   position: relative;
   padding: @modal-inner-padding;
 }
-
+*/
 // Footer (for actions)
 .modal-footer {
   padding: @modal-inner-padding;
@@ -134,11 +135,11 @@
 @media (min-width: @screen-sm-min) {
   // Automatically set modal's width for larger viewports
   .modal-dialog {
-    width: @modal-md;
-    margin: 30px auto;
+    //width: @modal-md;
+    //margin: 30px auto;
   }
   .modal-content {
-    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+    //.box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
 
   // Modal sizes
@@ -147,4 +148,25 @@
 
 @media (min-width: @screen-md-min) {
   .modal-lg { width: @modal-lg; }
+}
+
+/*custom styles*/
+.modal-dialog{
+  width: 69%;    
+  height: 100%;
+}
+.modal-content {
+  background: #efefef;    
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.modal-body {
+
+}
+.btn-modal-close{
+  outline: none;
+  text-decoration: none;
+  background: none;
+  border: none;
 }

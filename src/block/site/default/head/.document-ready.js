@@ -30,3 +30,12 @@ if (device.mobile() || device.tablet()) {
 }
 $("nav.navbar-fixed-top").autoHidingNavbar();
 */
+
+$('._czr__in__modal-nav a').hover(
+  function(){
+    $(this).addClass('in').removeClass('out');
+  },
+  function(){   
+      $(this).removeClass('in').addClass('out');
+  }
+)
