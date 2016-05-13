@@ -169,4 +169,28 @@
   text-decoration: none;
   background: none;
   border: none;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  font-size: 16px;
+  padding-top: 40px;
+  transform: translateY(-50%) rotate(-90deg);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  &:before{
+    font-family: @icon;
+    content: @icon-close;
+    position: absolute;
+    top: 0%;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 20px;
+    transition: @transition-site;
+  }
+  &:hover{
+    color: @black;
+    &:before{
+      font-size: 24px;
+    }
+  }
 }

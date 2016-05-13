@@ -65,7 +65,7 @@
 		}
 		
 		.scroll-line {
-			#fe.w(1px);
+			#fe.w(2px);
 			#fe.h(96%);
 			top:2%;
 			left:50%;
@@ -80,7 +80,13 @@
 						#fe.w(1em);
 						#fe.h(1em);
 						left: -0.2em;
-						top:50%;
+						top:0%;
+						width: 32px;
+					    height: 32px;
+					    border-radius: 50%;
+					    background-color: #f0f0f1;
+					    border: 2px solid #cdcdcd;
+					    left: -110%;
 					}
 				}
 			}
@@ -90,13 +96,13 @@
 	
 	.scroll-line {
 		position:absolute;
-		#fe.bg(#999999);
+		#fe.bg(#cdcdcd);
 		
 		.scroll {
 			position:absolute;
 			left:0;
 			top:0;
-			#fe.bg(#999999);
+			#fe.bg(#cdcdcd);
 			border-radius:4px;
 			
 			& > .scroll-ball {
@@ -110,7 +116,7 @@
 					display:block;
 					content:'';
 					position:absolute;
-					#fe.bg(#999999);
+					#fe.bg(#cdcdcd);
 					border-radius:50%;
 				}
 			}
