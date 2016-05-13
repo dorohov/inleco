@@ -1,3 +1,4 @@
+$('[data-toggle="tooltip"]').tooltip();
 $(".arrow-slider").each(function(i){var e=$(this),t=e.find(".img-block .item"),r=(e.find(".text-content"),e.find(".title-block"),e.find(".arrow-block")),n=r.find(".point-line");t.each(function(i){$("<a/>",{"class":"item",html:'<span class="point" ></span>',href:"#image-"+i}).on("click.arrow-slider.point",function(i){console.log("click.arrow-slider.point");var e=$(this).index();n.find(".item").removeClass("active"),t.fadeOut("fast").removeClass("active"),$(this).addClass("active"),t.eq(e).fadeIn("fast").addClass("active")}).appendTo(n)}),r.on("click.arrow-slider.right",".btn-arrow.right",function(i){var e=n.find(".item"),t=e.filter(".active").eq(0).index(),r=e.eq(t).next(".item");r.size()?r.trigger("click"):e.eq(0).trigger("click")}),r.on("click.arrow-slider.left",".btn-arrow.left",function(i){var e=n.find(".item"),t=e.filter(".active").eq(0).index(),r=e.eq(t).prev(".item");r.size()?r.trigger("click"):e.eq(-1).trigger("click")}),e.hasClass("with-timer")&&e.data("fecss-timer",setInterval(function(){e.is(":hover")||r.find(".btn-arrow.right").trigger("click")},3e3)),n.find(".item.active").size()||n.find(".item").eq(0).trigger("click")});
 $(".boobs").each(function(o){$(this)});
 $(document.body).on("click",".can-close .close-btn",function(c){c.preventDefault(),$(this).closest(".can-close").removeClass("active")});
@@ -13,5 +14,4 @@ $(".scroll-container").each(function(t){var r,o=$(this),a=$(o.attr("data-target"
 
 
 $(document.body).on("click.fecss.url-history",".url-history",{},function(t){t.preventDefault();var e=$(this),r=e.attr("href"),o=e.attr("data-target");"undefined"!=typeof o&&"undefined"!=o||(o="title:title, body:body");var d=!0;$(document.body).trigger("fecss.url-history.get",[r,o,d])});
-$('[data-toggle="tooltip"]').tooltip();
 $("img").addClass("img-responsive");var url=window.location.pathname;$('.navbar-nav a[href="'+url+'"]').parent().addClass("active"),$("._czr__ip-carousel .item").eq(0).addClass("active"),$("._czr__in__modal-nav a").hover(function(){$(this).addClass("in").removeClass("out")},function(){$(this).removeClass("in").addClass("out")});
