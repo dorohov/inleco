@@ -1403,6 +1403,7 @@
 	.content-block__inner{
 		padding-top: 120px;
 		background-size: 690px;
+		min-height: 870px;
 	}
 	.heading-site-block{
 		margin-bottom: 35px;
@@ -1410,7 +1411,7 @@
 }
 ._czr__cp__map{
 	width: 41%;
-	min-height: 980px;
+	min-height: 870px;
 }
 ._czr__cp__content-inner{
 	padding: 0 20px;
@@ -1435,6 +1436,77 @@
 }
 ._cp__item-btn{
 	margin-top: 40px;
+}
+._czr__cp__modal-dialog{
+	width: 59%;
+	.modal-content{
+		//background: url(../img/maket/contacts-modal.png) no-repeat -16px 0;
+	}
+	.modal-body{
+		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-news-right.png') no-repeat 100% -5px ;
+		background-size: 850px;
+	}
+}
+._czr__cp__flex-modal{
+	display: flex;	
+    flex-direction: column;
+    height: 100%;
+    //justify-content: center;
+    padding-top: 120px;
+    .heading-site-block{
+    	margin-bottom: 37px;
+    }
+}
+.form-reviews{    
+	max-width: 480px;
+    margin: 0 auto;
+	//opacity: @opacity;
+	textarea,
+	input{
+		width: 100%;
+		border: 1px solid @white;
+		margin-bottom: 30px;
+    	padding: 0px 18px;
+    	transition: @transition-site;
+		&::-webkit-input-placeholder {
+			color: #aaaaaa;
+			font-size: 18px;
+			line-height: 36px;
+		}
+		&:-moz-placeholder {
+			color: #aaaaaa;
+			font-size: 18px;
+			line-height: 36px;
+		}
+		&:focus{
+			outline: none;
+			border-color: @color-line;
+			color: @black;
+			&::-webkit-input-placeholder {
+				color: @black;
+			}
+			&:-moz-placeholder {
+				color: @black;
+			}
+		}
+	}
+	input{
+		height: 56px;
+	}
+	textarea{		
+    	padding: 13px 18px;
+    	height: 100px;
+	}
+}
+._czr__fr__note{
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 23px;
+}
+._czr__fr__btn-group{
+	.btn-line{
+		margin-right: 45px;
+	}
 }
 ._czr__index-header{
 	//opacity: @opacity;
