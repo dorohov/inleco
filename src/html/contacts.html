@@ -3,8 +3,7 @@
 	<head>
 		[snp tpl="src/block/site/default/head/.html" ] 
 	</head>
-	<body>	
-		
+	<body>			
 		[snp tpl="src/block/site/default/navbar/.html" class="navbar-site _czr__navbar-site" ]
 
 		[snp tpl="src/block/site/page/contacts/.html" class="contacts-page content-block _czr__contacts-page" ]
@@ -13,30 +12,33 @@
 
 		[snp tpl="src/block/site/default/modal/reviews.html" class="modal-site _czr__modal-reviews" ]
 
+		[snp tpl="src/block/site/default/head/script.html" ]
+
+		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script>
+			ymaps.ready(init);
+
+			function init () {
+			    var myMap = new ymaps.Map("map", {
+			            center: [55.74038, 37.527462],
+			            zoom: 16
+			        }, {
+			            searchControlProvider: 'yandex#search'
+			        }),
+
+			    // Создаем геообъект с типом геометрии "Точка".
+			        myGeoObject = new ymaps.GeoObject({});
+
+			    myMap.geoObjects
+			        .add(myGeoObject)
+			        .add(new ymaps.Placemark([55.74038, 37.527462], {
+			            balloonContent: 'Компания «Inleco»'
+			        }, {
+			            preset: 'islands#circleIcon',
+			            iconColor: '#4d7198'
+			        }));
+			}
+		</script>
 	</body>
-	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-	<script>
-		ymaps.ready(init);
 
-		function init () {
-		    var myMap = new ymaps.Map("map", {
-		            center: [55.74038, 37.527462],
-		            zoom: 16
-		        }, {
-		            searchControlProvider: 'yandex#search'
-		        }),
-
-		    // Создаем геообъект с типом геометрии "Точка".
-		        myGeoObject = new ymaps.GeoObject({});
-
-		    myMap.geoObjects
-		        .add(myGeoObject)
-		        .add(new ymaps.Placemark([55.74038, 37.527462], {
-		            balloonContent: 'Компания «Inleco»'
-		        }, {
-		            preset: 'islands#circleIcon',
-		            iconColor: '#4d7198'
-		        }));
-		}
-	</script>
 </html> 

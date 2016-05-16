@@ -159,34 +159,6 @@
 			display: inline-block;
 			padding-bottom: 5px;
 			overflow: hidden;
-			&:before{
-				content: '';
-				background-color:  #5d93a3;
-				width: 50px;
-				height: 1px;
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transition: @transition-site; 
-			}
-
-			&.in{
-				&:before{
-					animation-name: andown;
-					animation-duration: 2s;
-					animation-iteration-count: 1;
-					animation-fill-mode: forwards;
-				}
-			}
-			&.out{
-				&:before{          
-
-				animation-fill-mode: both;
-				animation-name: andown2;
-				animation-duration: 1.5s;
-				animation-iteration-count: 1;
-				}
-			}
 		}
 		&.active{
 			> a{
@@ -225,43 +197,4 @@
 	.scroll-hide{
 		height:370px;
 	}
-}
-@keyframes andown {
-	from {
-		left: 0;
-		top: 50%;
-		width: 50px;
-	}
-	40% {
-		top: 100%;
-	}
-	60% {
-		left: 65px;
-	}
-	80% {
-		width: 99%;
-	}
-	to{
-		top: 99%;
-		width: 100%;
-		left: 65px;
-
-	}
-}
-@keyframes andown2 {
-	from{
-		top: 99%;
-		width: 100%;
-		left: 65px;
-
-	}
-	50% {
-		top: 99%;
-		width: 50px;
-	}
-	to {
-		left: 0;
-		top: 50%;
-		width: 50px;
-	}  
 }

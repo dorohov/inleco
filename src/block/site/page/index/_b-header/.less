@@ -36,28 +36,4 @@
 	bottom: 65px;
     left: 50%;
     transform: translateX(50%);
-	animation-name: animate-down;
-	animation-duration: 1s;
-    animation-iteration-count: infinite;
-	&:before{
-		font-family: @icon;
-		content: @icon-arrow-down;
-		display: block;
-		border: 1px solid @white;
-		width: 44px;
-		line-height: 42px;
-		border-radius: 50%;
-		color: @white;
-		text-align: center;
-	}
-}
-
-
-@keyframes animate-down {
-	from, to {
-		transform: scale(1);
-	}
-	50% {    
-		transform: scale(1.05);
-	}
 }

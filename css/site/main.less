@@ -79,6 +79,32 @@ a{
     padding: 12px 26px;
     border-radius: 50px;
 }
+
+.btn-scroll{
+	animation-name: animate-down;
+	animation-duration: 1s;
+    animation-iteration-count: infinite;
+	&:before{
+		font-family: @icon;
+		content: @icon-arrow-down;
+		display: block;
+		border: 1px solid @white;
+		width: 44px;
+		line-height: 42px;
+		border-radius: 50%;
+		color: @white;
+		text-align: center;
+	}
+}
+
+@keyframes animate-down {
+	from, to {
+		transform: scale(1);
+	}
+	50% {    
+		transform: scale(1.05);
+	}
+}
 .link-modal-close{
 	border: none;
 	text-decoration: none;
@@ -162,4 +188,119 @@ a{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-404.png') no-repeat 100% 15px ;
 		position: relative;
 	}
+}
+/*anim*/
+._czr__anim-list{
+	list-style: none;
+	.anim{		
+		padding-left: 65px;
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		padding-bottom: 5px;
+		text-decoration: none;
+		&:before{
+			content: '';
+			background-color:  #5d93a3;
+			width: 50px;
+			height: 1px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transition: @transition-site; 
+		}
+		&.in{
+			&:before{
+				animation-name: andown;
+				animation-duration: 2s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+		}
+		&.out{
+			&:before{
+				animation-fill-mode: both;
+				animation-name: andown2;
+				animation-duration: 1.5s;
+				animation-iteration-count: 1;
+			}
+		}
+	}
+}
+@keyframes andown {
+	from {
+		left: 0;
+		top: 50%;
+		width: 50px;
+	}
+	40% {
+		top: 98%;
+	}
+	60% {
+		left: 65px;
+	}
+	80% {
+		width: 99%;
+	}
+	to{
+		top: 98%;
+		width: 100%;
+		left: 65px;
+
+	}
+}
+@keyframes andown2 {
+	from{
+		top: 98%;
+		width: 100%;
+		left: 65px;
+
+	}
+	50% {
+		top: 98%;
+		width: 50px;
+	}
+	to {
+		left: 0;
+		top: 50%;
+		width: 50px;
+	}  
+}
+._czr__anim-indic{	
+	.in{
+		&:before{
+			animation-name: anim-indic-in;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+	}
+	.out{
+		&:before{
+			animation-fill-mode: both;
+			animation-name: anim-indic-out;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+		}
+	}
+}
+@keyframes anim-indic-in {
+	from {
+		top: 50%;
+	}
+	to{
+		top: 115%;
+		height: 2px;
+		background: lighten(#5d93a3, 30%);
+	}
+}
+@keyframes anim-indic-out {
+	from{
+		top: 115%;
+		height: 2px;
+		background: lighten(#5d93a3, 30%);
+	}
+	to {
+		top: 50%;
+	}  
 }

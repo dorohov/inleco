@@ -1,0 +1,118 @@
+._czr__products-item-slider{
+	//opacity: @opacity;
+	background: linear-gradient(-27deg, rgb(223, 242, 248) 22%, rgb(210, 238, 246) 78%);
+} 
+._czr__pips__carousel{
+	//background: url('../img/maket/bg-slide2.png') no-repeat left top; 
+	.carousel-inner{
+		height: 980px;
+		.item{
+			height: 100%;
+			padding: 0 30px;
+			@media @media-size-xl{
+				padding: 0 90px;
+			}
+		}
+	}
+}
+._czr__pips__flex{
+	height: 100%;
+	align-items: stretch;
+}
+._czr__pips__note-block{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	@media @media-size-xl{
+		padding-left: 70px;
+	}
+	.literal{
+		font-size: 145px;
+		font-family: @regal-bold;    
+		line-height: 10px;
+	}
+}
+._czr__pips__preview{
+	align-items: flex-end;
+    display: flex;
+}
+._czr__pips__note{
+	border-bottom: 1px solid rgb(93, 147, 163);
+	padding-bottom: 40px;
+	margin-bottom: 40px; 
+}
+._czr__pips__note-flex{
+	flex-wrap: wrap;
+}
+._czr__pips__list-block{
+	width: 50%;
+	margin-bottom: 45px;
+}
+._czr__pips__list{
+	max-width: 510px;
+	.__heading{
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: @proxima-bold;
+		letter-spacing: 6px;
+    	margin-left: 40px;
+    	margin-bottom: 10px;
+	}
+	.anim{		
+    	line-height: 18px;
+    	margin-bottom: 8px;
+    	font-size: 16px;
+    	cursor: default;
+	}
+}
+.slide1{
+	padding-top: 80px;
+	._czr__pips__note-block{
+		width: 50%;
+		padding-right: 5%;
+	}
+	._czr__pips__preview{
+		width: 50%;
+    	justify-content: flex-end; 
+	}
+}
+.slide2{
+	padding-top: 80px;
+	background: url('@{url-path-img}/products/bg-slider-item2.png') no-repeat 100% 100%;
+	._czr__pips__note-block{
+		width: 73%;
+		padding-top: 60px;
+	}
+	._czr__pips__preview{
+		width: 27%;
+		padding-left: 7%;
+	}
+}
+._czr__pips__carousel-indicators {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 70px;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  	li {
+    	display: inline-block;
+		text-indent: -999px;
+		border: 1px solid rgb(93, 147, 163);
+		border-radius: 10px;
+		cursor: pointer;
+		background: transparent;
+		transition: @transition-site;
+		width: 10px;
+		height: 10px;
+		margin: 25px 0;
+ 	}
+  	.active {
+		background-color: rgb(93, 147, 163);
+  	}
+}
