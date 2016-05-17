@@ -80,6 +80,78 @@ a{
     border-radius: 50px;
 }
 
+._czr__btn-pub{
+	text-decoration: none;
+	outline: none;
+	background: none;
+	border: none;
+	font-size: 16px;
+	font-family: @proxima;
+	transform: rotate(-90deg);
+	text-transform: uppercase;
+	position: absolute;
+    top: 410px;
+    letter-spacing: 9.5px;
+    left: -123px;
+    padding: 120px 0px 0px 0px;
+    transition: @transition-site;     
+    z-index: 20;
+    &:before{
+    	content: '';
+    	position: absolute;
+    	height: 1px;
+    	width: 30px;
+    	background: @black;
+    	transform: rotate(90deg);
+    	left: 127px;
+    	top: 95px;
+   		transition: @transition-site;
+    }
+    &:after{
+    	content: '';
+    	position: absolute;
+    	height: 1px;
+    	width: 20px;
+    	background: @black;
+    	transform: rotate(90deg);
+    	left: 112px;
+    	top: 100px;
+   		transition: @transition-site;
+    }
+    span:before{
+    	content: '';
+    	position: absolute;
+    	height: 1px;
+    	width: 50px;
+    	background: @black;
+    	transform: rotate(90deg);
+    	left: 107px;
+    	top: 85px;
+   		transition: @transition-site;
+    }
+    &:hover{
+    	color: @color-line;
+    	color: lighten(@black, 30%);
+	    &:before{
+	    	width: 50px;
+	    	left: 117px;
+	    	top: 85px;			
+    		background: @color-line;
+    		background: lighten(@black, 30%);
+	    }
+	    &:after{
+	    	width: 50px;
+	    	left: 97px;
+	    	top: 85px;			
+    		background: @color-line;
+    		background: lighten(@black, 30%);
+	    }
+    	span:before{
+    		background: @color-line;
+    		background: lighten(@black, 30%);    		
+    	}
+    }
+}
 .btn-scroll{
 	animation-name: animate-down;
 	animation-duration: 1s;
