@@ -236,9 +236,20 @@ a{
 		.scroll-overflow{
 
 		}
-	}
+	}	
+	
 }
-
+.scroll-text{
+	font-family: @proxima;
+	color:  #bbbbbb;
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: -5.5em;
+    width: 50px;
+    letter-spacing: 2px;
+}
 @keyframes anim-heading-line {
 	from {
 		width: 0px;
@@ -264,6 +275,24 @@ a{
 .bg-about{	
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-about.png') no-repeat right -90px;
+		position: relative;
+	}
+}
+.bg-training{	
+	.content-block__inner{
+		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-training.png') no-repeat right top;
+		position: relative;
+	}
+}
+.bg-coach{	
+	.content-block__inner{
+		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left;
+		position: relative;
+	}
+}
+.bg-timetable  {	
+	.content-block__inner{
+		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-news-right.png') no-repeat 100% -5px ;
 		position: relative;
 	}
 }
