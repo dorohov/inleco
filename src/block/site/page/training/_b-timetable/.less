@@ -139,89 +139,148 @@
 	margin-bottom: 20px;
 	transition: @transition-site;
 }
-._czr__modal-coach{
+._czr__modal-timetable{
 	.modal-dialog{
-		background: url(../img/maket/coach-modal.jpg) no-repeat 0px -100px;
-		width: 70%;
+		//background: url(../img/maket/timetable-modal.jpg) no-repeat 0px -100px;
+		width: 69%;
 	}
 	.modal-content{
 		//opacity: @opacity;
 	}
 	.modal-body{
-		//background: url('@{url-path-img}/bg/bg-news-right.png') 100% -5px no-repeat;
-		background-size: 850px;
+
+	}
+	.heading-site-block {
+	    max-width: 950px;    
+	    margin-bottom: 40px;
+	}
+	.heading-site{
+		font-size: 36px;
+		line-height: 40px;
+		font-family: @regal;
+		letter-spacing: 0;
+		padding-left: 160px;
 	}
 }
-._czr__tpcm__flex{
+._czr__tptt__flex-modal{
 	display: flex;
-	align-items: center;
-	height: 100%;
+	flex-direction: column;
+	height: 100%;    
+	justify-content: center;
+	padding-top: 35px;
 }
-._czr__tpcm__col-left{
-    width: 51%;
-    padding-left: 100px;
-    img{
-    	margin-left: auto;
-    }
+._czr__tptt__content-flex{
+	padding-left: 160px;
 }
-._czr__tpcm__col-right{
-	width: 49%;    
-	padding-top: 110px;
+._czr__tptt__content-left{
+	width: 28%;
+	color:  #a2a2a2;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;    
+	letter-spacing: 1px;
 }
-._czr__tpcm__scroll{
-	max-width: 91%;
-    position: relative;
-    .scroll-hide {
-	    width: 590px;
-	    height: 520px;
-	    margin-left: -70px;
-	    padding-left: 60px;	    
-		padding-top: 25px;
-		background: #efefef;
-		position: relative;
-		&:before{
-			content: '';
-			position: absolute;
-			top: 0;
-			height: 55px;
-			background: linear-gradient(to bottom, #efefef 0%, fadeout(#efefef, 100%) 100%);
-			left: 0;
-    		right: 0;
-		}
-		&:after{
-			content: '';
-			position: absolute;
-			bottom: 0;
-			height: 40px;
-			background: linear-gradient(to bottom, fadeout(#efefef, 100%) 0%, #efefef 100%);
-			left: 0;
-    		right: 0;
-		}
-		.scroll-element {
-    		width: 106%;    
-    		padding-bottom: 5%;
-		}
-		.scroll-overflow{
-    		padding-right: 3%;
-
-		}
+._czr__tpttm__date{
+	&:before{
+		font-family: @icon;
+		content: @icon-calendar;
+		color: rgb(93, 147, 163);
+		margin-right: 15px;
+		font-size: 26px;
+    	line-height: 26px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	margin-bottom: 30px;
+}
+._czr__tpttm__address{
+	text-transform: none;
+	font-size: 16px;
+	margin-bottom: 30px;    
+	letter-spacing: 0px;
+	&:before{
+		font-family: @icon;
+		content: @icon-map;
+		color: rgb(93, 147, 163);
+		margin-right: 15px;
+		font-size: 28px;
+    	line-height: 28px;
+		float: left;
 	}
 }
-._czr__tpcm__heading{
-	font-family: @regal;
-	font-size: 32px;
-	line-height: 44px;
-	margin:  0 0 10px;
-	padding-left: 50px;
-
+._czr__tpttm__time{
+	&:before{
+		font-family: @icon;
+		content: @icon-clock1;
+		color: rgb(93, 147, 163);
+		margin-right: 15px;
+		font-size: 25px;
+    	line-height: 25px;
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
-._czr__tpcm__inner{
-	padding-right: 20px;
-	//padding-top: 25px;    
-	padding-top: 10px;
-	font-size: 16px;
-	line-height: 24px;
+._czr__tptt__content-right{
+	width: 63%;
+	font-size: 18px;
+	line-height: 30px;
 	> div, p{
 		margin-bottom: 10px;
 	}
+}
+._czr__tpttm__btn{
+	margin-top: 30px;
+}
+
+
+._czr__modal-timetable-rev{
+	.modal-dialog{
+		//background: url(../img/maket/timetable-rev-modal.jpg) no-repeat 0px -100px;
+		width: 69%;
+	}
+	.modal-content{
+		//opacity: @opacity;
+	}
+	.modal-body{
+
+	}
+	.heading-site-block {
+	    max-width: 950px;    
+	    margin-bottom: 40px;
+	}
+	.heading-site{
+		font-size: 36px;
+		line-height: 40px;
+		font-family: @regal;
+		letter-spacing: 0;
+		padding-left: 160px;
+	}
+	.form-reviews{
+		max-width: 960px;
+	    margin: 0;
+	    padding-left: 160px;
+	}
+}
+._czr__tpttr__flex-modal{
+	display: flex;
+	flex-direction: column;
+	height: 100%;    
+	justify-content: center;
+	padding-bottom: 70px;
+}
+._fr__col-left{
+	width: 38%;
+	color:  #a2a2a2;
+	font-size: 16px;
+	font-family: @proxima;
+	line-height: 20px;
+
+}
+._fr__col-right{
+	width: 62%;
+}
+._fr__heading{
+	font-size: 30px;
+	font-family: @regal;
+	color: @base-color;
 }

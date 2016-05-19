@@ -5,6 +5,16 @@ $('._czr__in__modal-nav a[href="'+url+'"]').parent().addClass('active');
 $('._czr__ip-carousel .item').eq(0).addClass('active'); 
 $('._czr__pips__carousel .item').eq(0).addClass('active'); 
 $('._czr__pipa__carousel .item').eq(0).addClass('active'); 
+$('#getModal').click(function(){
+    $('#modal-timetable').modal('hide');
+    setTimeout(function() {$('#modal-timetable-reviews').modal('show');}, 500)
+    return false;
+});
+$('#getModal2').click(function(){
+    $('#modal-timetable-reviews').modal('hide');
+    setTimeout(function() {$('#modal-timetable').modal('show');}, 500)
+    return false;
+});
 /*
 $('._fs__nav-item a[href="'+url+'"]').parent().addClass('active');
 $('._ncb__nav a[href="'+url+'"]').parent().addClass('active');

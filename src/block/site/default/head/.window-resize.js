@@ -11,7 +11,7 @@ var h_header = $('._czr__navbar-site').outerHeight(true),
 	//$("._srcb__dropdown-menu").css("max-width", w_step_drop);
 if (w_window > 767){
 	$("._czr__404-page .content-block__inner").css("height", h_404);
-	$("._czr__resize .content-block__inner").css("height", h_resize);
+	$("._czr__resize .content-block__inner").css("height", h_404);
 	$("._czr__about-page .content-block__inner").css("height", h_404);
 } else {
 	$("._czr__404-page .content-block__inner").removeAttr("style");
