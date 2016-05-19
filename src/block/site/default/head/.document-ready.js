@@ -2,6 +2,7 @@ $('img').addClass('img-responsive');
 var url = window.location.pathname;
 $('.navbar-nav a[href="'+url+'"]').parent().addClass('active'); 
 $('._czr__in__modal-nav a[href="'+url+'"]').parent().addClass('active'); 
+$('._fs__navbar a[href="'+url+'"]').parent().addClass('active'); 
 $('._czr__ip-carousel .item').eq(0).addClass('active'); 
 $('._czr__pips__carousel .item').eq(0).addClass('active'); 
 $('._czr__pipa__carousel .item').eq(0).addClass('active'); 
