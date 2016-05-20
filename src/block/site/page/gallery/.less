@@ -1,0 +1,120 @@
+._czr__gallery-page{
+	background: #ebecef;
+	//opacity: @opacity;
+	.content-block__inner{
+		padding: 0px;
+	}
+	@media @media-size-xl{
+		.container {
+		    width: 1310px;
+		}
+	}
+	.heading-site-block{
+		margin-bottom: 30px;
+	}
+}
+._czr__gp__content{
+	height: 100%;
+}
+._czr__gp__flex{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 59%;
+	padding-bottom: 60px;
+}
+._czr__gp__inner{
+	max-width: 540px;
+    margin: 0 auto;
+    padding-right: 50px;
+}
+._czr__gp__note{
+	margin-bottom: 20px;
+}
+._czr__gp__gallery{
+	width: 41%;
+	position: relative;
+	transition: @transition-site;
+	cursor: pointer;
+	&:before{
+		content: '';
+		width: 105px;
+		height: 80px;
+		background: url('@{url-path-img}/icon/icon-arrow-next.png') no-repeat center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: @transition-site;
+	}
+	&:hover{		
+		background-position: -150px 0px !important;
+		&:before{
+			transform: scale(1.05);
+		}
+	}
+}
+
+._czr__modal-gallery{
+	padding-right: 0!important;
+	.modal-dialog{
+		//background: url(../img/maket/gallery-modal.jpg) no-repeat 100% -100px;
+		width: 87%;
+		margin-left: auto;
+	}
+	.modal-content{
+		//opacity: @opacity;
+	}
+	.modal-body{
+
+	}
+	.heading-site-block {
+	    max-width: 950px;    
+	    margin-bottom: 40px;
+	}
+	.heading-site{
+		font-size: 36px;
+		line-height: 40px;
+		font-family: @regal;
+		letter-spacing: 0;
+		padding-left: 160px;
+	}
+	.form-reviews{
+		max-width: 960px;
+	    margin: 0;
+	    padding-left: 160px;
+	}
+	&.modal.fade .modal-dialog {
+	    transform: translate(125%,0);
+	}
+	&.modal.in .modal-dialog {
+	    transform: translate(0,0);
+	}
+}
+._czr__gpm__modal-btn-close{	
+	text-decoration: none;
+	outline: none;
+	background: none;
+	border: none;
+	background: url('@{url-path-img}/icon/icon-close.png') no-repeat center;
+	width: 86px;
+	height: 86px;
+	position: absolute;    
+	top: 50%;
+    left: 4%;
+}
+._czr__gpm__control{
+	text-decoration: none;
+	position: absolute;
+	top: 50%;	
+	width: 105px;
+	height: 80px;
+	&.next{
+		background: url('@{url-path-img}/icon/icon-arrow-next.png') no-repeat center;
+		right: 10%;		
+	}
+	&.prev{
+		background: url('@{url-path-img}/icon/icon-arrow-prev.png') no-repeat center;	
+		left: 10%;	
+	}
+}

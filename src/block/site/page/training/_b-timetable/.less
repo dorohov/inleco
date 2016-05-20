@@ -27,7 +27,8 @@
 	margin-left: -5px;
 	letter-spacing: 1px;
 	margin-bottom: 55px;
-	div{
+    margin-right: 0!important;
+	> div{
 		margin-right: 30px;
 	}
 	span{
@@ -37,7 +38,7 @@
 		color: @base-color;
 	}
 }
-/*
+
 ._czr__tptt__filter-item{
 	min-width: 150px;
 	position: relative; 
@@ -45,9 +46,11 @@
 		&.open{
 			position: absolute;
 			background: red;
-			padding: 0 15px;
-			left: -15px;
-			width: 200px;			
+			padding: 20px 25px;
+			left: -25px;
+			top: -20px;	
+			width: 260px;
+			z-index: 20;		
 			a{
 				background: red;
 				display: block;
@@ -60,11 +63,12 @@
 				border: 0;
 				right: 0;
 				min-width: inherit;
-
+				position: relative;
+				width: 100%;
 			}
 		}
 	}
-}*/
+}
 
 ._czr__tptt__flex{
 	display: flex;

@@ -6,6 +6,7 @@ $('._fs__navbar a[href="'+url+'"]').parent().addClass('active');
 $('._czr__ip-carousel .item').eq(0).addClass('active'); 
 $('._czr__pips__carousel .item').eq(0).addClass('active'); 
 $('._czr__pipa__carousel .item').eq(0).addClass('active'); 
+$('._czr__modal-gallery .item').eq(0).addClass('active'); 
 $('#getModal').click(function(){
     $('#modal-timetable').modal('hide');
     setTimeout(function() {$('#modal-timetable-reviews').modal('show');}, 500)

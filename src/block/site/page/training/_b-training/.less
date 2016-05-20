@@ -1,6 +1,7 @@
 ._czr__training-page{
 	background: #eeeff0;
 	//opacity: @opacity;
+	position: relative;
 	.content-block__inner{
 		padding: 20px 0 0px;
 	}
@@ -32,6 +33,30 @@
 		&:before{
 			color: rgb(98, 176, 198);
 			border-color: rgb(98, 176, 198);
+		}
+	}
+}
+
+.training__indicators{
+	list-style: none;
+	position: absolute;
+	left: 40px;
+	top: 0px;
+	bottom: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 10px;
+	> li{
+		border-radius: 50%;
+		border: 1px solid #5fafc5;
+		width: 10px;
+		height: 10px;
+		margin: 25px 0px;
+		cursor: pointer;
+		transition: @transition-site;
+		&.active{
+			background: #5fafc5;
 		}
 	}
 }
