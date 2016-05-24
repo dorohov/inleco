@@ -1,11 +1,14 @@
 ._czr__contacts-page{
+	//opacity: @opacity;
 	font-family: @regal;
 	font-size: 22px;
 	line-height: 30px;
 	a{
 		color: @base-color;
-
 	}
+    @media @media-size-lg{
+    	font-size: 18px;
+    }
 }
 ._czr__cp__flex{
 	display: flex;
@@ -16,28 +19,50 @@
 		padding-top: 120px;
 		background-size: 690px;
 		min-height: 870px;
+    	@media @media-size-lg{
+    		min-height: 695px;
+    		padding: 85px 0 20px;
+    	}
 	}
 	.heading-site-block{
 		margin-bottom: 35px;
-	}
+	    @media @media-size-lg{
+			margin-bottom: 25px;
+		}
+    }
 }
 ._czr__cp__map{
 	width: 41%;
-	min-height: 870px;
+	height: 870px;
+	@media @media-size-lg{
+		height: 695px;
+	}
 }
 ._czr__cp__content-inner{
 	padding: 0 20px;
     max-width: 565px;
     margin: 0 auto;
+	@media @media-size-lg{
+		padding: 0 20px 0 120px
+	}
 }
 ._cp__item{
 	margin-bottom: 20px;
+	@media @media-size-lg{
+		margin-bottom: 15px;
+		&._cp__item-tel{
+			a{font-size: 21px;}
+		}
+	}
 }
 ._cp__item-heading{
 	text-transform: uppercase;
 	font-size: 24px;
     letter-spacing: 2.8px;
     margin-bottom: 20px;
+	@media @media-size-lg{
+		font-size: 22px;
+	}
 }
 ._cp__item-label{
 	font-family: @proxima;
@@ -48,6 +73,9 @@
 }
 ._cp__item-btn{
 	margin-top: 40px;
+	@media @media-size-lg{
+		margin-top: 25px;
+	}
 }
 ._czr__cp__modal-dialog{
 	width: 59%;

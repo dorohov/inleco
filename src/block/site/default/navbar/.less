@@ -9,6 +9,13 @@
 	background: @white;
     width: 100px;
     height: 100px;
+    @media @media-size-lg{
+	    width: 75px;
+	    height: 75px;
+		img{
+			max-width: 30px;
+		}
+    }
 }
 ._czr__navbar-nav{
 	padding: 25px 22px;
@@ -37,6 +44,16 @@
 			}
 		}
 	}
+    @media @media-size-lg{
+    	padding: 13px 22px 12px;
+    	> li{
+			> a{
+				font-size: 12px;
+				padding: 15px 20px;
+    			letter-spacing: 0.5px;
+			}
+		}
+    }
 }
 .navbar-soc{
 	.icon{
@@ -84,6 +101,9 @@
 			margin-left: 20px;
 		}
 	}
+    @media @media-size-lg{
+    	height: 75px;
+    }
 }
 /* -----------------------------------------------------------------------------
 

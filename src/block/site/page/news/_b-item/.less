@@ -1,6 +1,10 @@
 ._czr__news-item-page{
+	//opacity: @opacity;
 	.content-block__inner{
-		padding-top: 75px;
+		//padding-top: 75px;
+		@media @media-size-xl1660{
+			padding-top: 75px;
+		}
 	}
 	.container{
 		@media @media-size-xl1660{
@@ -17,6 +21,9 @@
 }
 ._czr__nip__heading-site-block{
 	margin-bottom: 35px;
+	@media @media-size-lg{
+		margin-bottom: 15px;
+	}
 }
 ._czr__nip__heading-site{
 	font-size: 36px;
@@ -24,6 +31,13 @@
 	padding-left: 10%;
 	margin-bottom: 15px;
 	letter-spacing: 0;
+	@media @media-size-lg{
+		font-size: 24px;
+		padding-left: 125px;
+		line-height: 32px;
+    	margin-bottom: 10px;
+    	padding-bottom: 10px;
+	}
 }
 ._czr__nip__date{
 	font-family: @regal-italic;
@@ -32,12 +46,17 @@
 	padding-left: 10%;
 	letter-spacing: 1.5px;
 	margin-bottom: 15px;
+	@media @media-size-lg{
+		font-size: 18px;
+		padding-left: 125px;
+		//line-height: 24px;
+	}
 }
 ._czr__nip__item{
 	padding-left: 10%;
 	line-height: 28px;
 	> div, p{
-		padding-left: 160px;
+		padding-left: 150px;
 		margin-bottom: 30px;
 		&.img{
 			padding-left: 0;
@@ -76,6 +95,36 @@
 		float: left;
 		margin-right: 15px;
 	}
+	@media @media-size-lg{
+		font-size: 16px;
+    	line-height: 24px;
+		.literal{
+			font-size: 120px;    
+			line-height: 96px;
+		}
+		blockquote{
+			font-size: 22px;
+			line-height: 30px;    
+			padding: 25px 30px 25px 30%;
+			&:before{
+				font-size: 38px;
+				line-height: 20px;
+				left: 20%;
+			}
+		}
+		> div + blockquote,
+		> ul + blockquote,
+		> p + blockquote{
+			margin-top: 0px;
+		}
+		> div, p{
+			margin-bottom: 20px;
+			&.img{    
+				margin-left: -12%;
+				margin-bottom: 25px;
+			}
+		}
+	}
 }
 ._czr__nip__soc{
 	border-top: 1px solid #5d93a3;
@@ -106,13 +155,21 @@
 			&:before{color: darken(#5d93a3,15%);}
 		}
 	}
+	@media @media-size-lg{
+		padding-top: 35px;
+		margin-left: 150px;
+	}
 }
 
 
 ._czr__nip__col-right{
 	width: 29%;
-	padding-left: 65px;
-	padding-right: 120px;
+	padding-right: 70px;
+	@media @media-size-xl1660{
+		padding-left: 65px;
+		padding-right: 120px;
+
+	}
 	._czr__np-item{
 		padding-left: 30px;
 		margin-bottom: 0px;
@@ -132,9 +189,17 @@
 	    top: 87px;
 	    left: -65px;
 	}
-
+	@media @media-size-lg{
+		._czr__np-item__heading{
+    		font-size: 22px;
+		}
+	}
 }
 ._czr__nip__col-heading{
 	padding-left: 25px;
     margin: 40px 0 20px;
+	@media @media-size-lg{
+	    margin: 45px 0 20px;
+		font-size: 25px;		
+	}
 }

@@ -37,7 +37,7 @@ a{
 	font-size: 14px;
     letter-spacing: 0.5px;
     padding: 0 40px;
-    margin-left: 10px;    
+    //margin-left: 10px;    
     transition: @transition-site;
     position: relative;
     color: #222222;
@@ -151,6 +151,12 @@ a{
     		background: lighten(@black, 30%);    		
     	}
     }
+    @media @media-size-lg{
+    	top: 285px;    
+    	font-size: 14px;
+    	letter-spacing: 8px;
+    	left: -103px;
+    }
 }
 .btn-scroll{
 	animation-name: animate-down;
@@ -167,6 +173,12 @@ a{
 		color: @white;
 		text-align: center;
 	}
+	@media @media-size-lg{
+		&:before{
+			width: 36px;
+			line-height: 34px;
+	    }
+    }
 }
 
 @keyframes animate-down {
@@ -203,10 +215,16 @@ a{
 }
 .content-block__inner{
 	padding: 100px 0 20px;
+	@media @media-size-lg{
+		padding: 60px 0 20px;
+	}
 }
 .heading-site-block{
 	display: flex;
 	margin-bottom: 60px;
+	@media @media-size-lg{
+		margin-bottom: 30px;
+	}
 }
 .heading-site-inner{}
 .heading-site{
@@ -215,6 +233,9 @@ a{
 	padding-left: 120px;
     letter-spacing: 2px;
     padding-bottom: 15px;
+    @media @media-size-lg{		
+		font-size: 36px;
+    }
 }
 .heading-line{
 	display: block;
@@ -264,24 +285,35 @@ a{
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-news-right.png') no-repeat 100% -5px ;
 		position: relative;
+		@media @media-size-lg{
+			background-size: auto, 750px;
+		}
 	}
 }
 .bg-404{	
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-404.png') no-repeat 100% 15px ;
 		position: relative;
+		background-size: auto 100%;
 	}
 }
 .bg-about{	
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-about.png') no-repeat right -90px;
 		position: relative;
+		@media @media-size-lg{
+    		background-size: auto, auto 100%;
+    		background-position: top left, right center;
+		}
 	}
 }
 .bg-training{	
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-training.png') no-repeat right bottom, url('@{url-path-img}/bg/bg-romb-bottom.png') no-repeat left bottom;
 		position: relative;
+		@media @media-size-lg{
+			background-size: 820px, auto;
+		}
 	}
 }
 .bg-gallery{	

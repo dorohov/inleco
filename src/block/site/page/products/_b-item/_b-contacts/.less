@@ -4,6 +4,9 @@
 				 url('@{url-path-img}/products/bg-contacts-right.png') no-repeat right top;
 	background-color: #eeeeee;
 	padding: 150px 0;
+	@media @media-size-lg{
+		padding: 110px 0;
+	}
 	@media @media-size-xl{
 		.container{
 			width: 1310px;
@@ -15,6 +18,10 @@
 	font-size: 48px;
 	line-height: 60px;
 	margin-bottom: 55px;
+	@media @media-size-lg{
+		font-size: 36px;
+		line-height: 44px;
+	}
 }
 ._czr__pipc__content{
 	max-width: 1000px;
@@ -74,8 +81,20 @@
 		&.icon-mail{
 			&:before{content: @icon-mail;}
 		}
+		@media @media-size-lg{
+			font-size: 24px;
+			line-height: 48px;
+			&:before{
+				width: 46px;
+				line-height: 46px;	
+				font-size: 20px;
+			}
+		}
 	}
-
+	@media @media-size-lg{
+		justify-content: flex-end;    
+		padding-top: 80px
+	}
 }
 ._czr__pipc__reviews{
 	padding-bottom: 10px;
@@ -110,10 +129,16 @@
 	input{
 		height: 56px;
 	}
+	@media @media-size-lg{
+		padding-top: 20px;
+	}
 }
 ._czr__pipc__reviews-note{
 	font-size: 16px;
 	line-height: 22px;
 	color:  #101010;
 	margin-bottom: 25px;
+	@media @media-size-lg{
+		max-width: 330px;
+	}
 }

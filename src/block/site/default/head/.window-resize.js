@@ -12,9 +12,11 @@ var h_header = $('._czr__navbar-site').outerHeight(true),
 if (w_window > 767){
 	$("._czr__404-page .content-block__inner").css("height", h_404);
 	$("._czr__resize .content-block__inner").css("height", h_404);
+	$(".products-item-slider .carousel-inner").css("height", h_resize);
 	$("._czr__about-page .content-block__inner").css("height", h_404);
 } else {
 	$("._czr__404-page .content-block__inner").removeAttr("style");
 	$("._czr__resize .content-block__inner").removeAttr("style");
 	$("._czr__about-page .content-block__inner").removeAttr("style");
+	$(".products-item-slider .carousel-inner").removeAttr("style");
 };

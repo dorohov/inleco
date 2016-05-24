@@ -68,10 +68,18 @@
   bottom: 0;
   left: 0;
   z-index: @zindex-modal-background;
-  background-color: @modal-backdrop-bg;
+  //background-color: @modal-backdrop-bg;
+  background-color: fadeout(@black, 75%);
+  transition: all 0.5s ease;
   // Fade for backdrop
-  &.fade { .opacity(0); }
-  &.in { .opacity(@modal-backdrop-opacity); }
+  &.fade {
+    //.opacity(0); 
+    left: -100%;
+  }
+  &.in { 
+    //.opacity(@modal-backdrop-opacity);
+    left: 0; 
+  }
 }
 
 // Modal header
@@ -154,6 +162,9 @@
 .modal-dialog{
   width: 69%;    
   height: 100%;
+  @media @media-size-lg{
+    width: 74%;
+  }
 }
 .modal-content {
   background: #efefef;    

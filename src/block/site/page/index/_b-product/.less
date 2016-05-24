@@ -1,20 +1,39 @@
 ._czr__index-product{
 	//opacity: @opacity;
-	background: url('@{url-path-img}/index/bg-product.jpg') no-repeat left top;
+	//background: url('@{url-path-img}/index/bg-product.jpg') no-repeat left top;
 	color: lighten(@black, 6.2); //#101010
+	@media @media-size-lg{
+		background-position: -190px 0px;
+		background-size: 1760px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	background: linear-gradient(-27deg, rgb(209, 238, 246) 21%, rgb(228, 245, 249)  79%);
 }
 ._czr__ip-carousel{
 }
 ._czr__ip-item{	
 	min-height: 750px;   
+	@media @media-size-lg{
+		min-height: 745px;
+	}
 }
 ._czr__ip-img{
 	width: 48%;
 	position: relative;
+	background: url('@{url-path-img}/index/bg-slider-products.png') no-repeat center;
 	img{
-		top: 109px;
-		right: 205px;
+		top: 130px;
+		left: 50%;
+		transform: translateX(-30%);
 		position: absolute;
+	}
+	@media @media-size-lg{
+		background-size: 800px;
+		img{
+			max-width: 360px;
+	    	transform: translateX(-25%);
+		}
 	}
 }
 ._czr__ip-note{
@@ -25,16 +44,28 @@
 ._czr__ip-note-flex{
 	max-width: 600px;
 	//transform: translateY(-13px);
+	@media @media-size-lg{
+		max-width: 450px;    
+		padding-bottom: 20px;
+	}
 }
 ._czr__ip-note-inner{	
 	border-bottom: 1px solid #5d93a3;
 	padding-bottom: 20px;
 	margin-bottom: 30px;
+	@media @media-size-lg{
+		padding-bottom: 30px;
+	}
 }
 ._czr__ip-note-heading{
     font-size: 36px;
     line-height: 48px;
     margin-bottom: 15px;
+	@media @media-size-lg{
+		font-size: 30px;
+		line-height: 42px;
+    	margin-bottom: 10px;
+	}
 }
 ._czr__ip-param{
 	font-family: @proxima-thin;
@@ -84,6 +115,9 @@
 		color: @black;
 		text-decoration: none;
 	}
+	@media @media-size-lg{
+		flex-direction: column;
+	}
 }
 ._czr__ip-prev{
 	left: 20px;
@@ -92,7 +126,8 @@
 			text-align: left;
 			left: -150%;
 		} 
-		padding-left: 10px;  
+		padding-left: 10px; 
+		
 	}
 	&:hover{
 		._czr__ip-control-note{
@@ -100,6 +135,9 @@
 				left: 0%;
 			} 
 		}
+	}
+	@media @media-size-lg{
+		align-items: flex-start;
 	}
 }
 ._czr__ip-next{
@@ -117,6 +155,12 @@
 				right: 0%;
 			} 
 		}
+	}
+	@media @media-size-lg{
+		align-items: flex-end;	
+		._czr__ip-control-note{
+			order: 1;
+		}
 	}	
 }
 ._czr__ip-control-note{
@@ -131,4 +175,7 @@
 		display: block;
     	transition: @transition-site;
     }
+    @media @media-size-lg{
+		padding-top: 20px;
+	} 
 }

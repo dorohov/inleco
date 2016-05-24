@@ -37,10 +37,16 @@
 			text-transform: uppercase;
 			font-family: @proxima;
 			margin: 0 30px;
+    		transition: @transition-site;
+			&:hover{
+				color: lighten(#8f8d8d, 20%);
+				text-decoration: none;
+			}
 		}
 		&.active{
 			> a{
-				text-decoration: underline;
+				color: lighten(#8f8d8d, 20%);
+				//text-decoration: underline;
 			}
 		}
 	}

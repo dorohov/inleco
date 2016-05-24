@@ -1,21 +1,35 @@
 ._czr__coach-page{
 	//opacity: @opacity;
-	.content-block__inner{
-		padding-top: 120px;
-		padding-bottom: 70px;
-	}
-	@media @media-size-xl{
+	@media @media-size-lg{
+		.content-block__inner{
+			padding-top: 88px;
+    		padding-bottom: 30px;
+		}/*
 		.container {
-			width: 1310px;
+			width: 910px;
 		}
 		.container {
 			width: 100%;
 			padding-left: 15%;
 			padding-right: 0%;
+		}*/
+	}
+	@media @media-size-xl{
+		/*.container {
+			width: 1310px;
+		}*/
+		.content-block__inner{
+			padding-top: 120px;
+			padding-bottom: 70px;
+		}
+		.heading-site-block{
+			margin-bottom: 40px;
 		}
 	}
-	.heading-site-block{
-		margin-bottom: 40px;
+	.container {
+		width: 100%;
+		padding-left: 15%;
+		padding-right: 0%;
 	}
 }
 ._czr__tpc__flex{
@@ -33,6 +47,9 @@
 	.scroll-hide{
 		height:625px;
 		width: 1000%;
+		@media @media-size-lg{
+			height: 470px;
+		}
 	}
 	.scroll-overflow{
 		height: 100%;
@@ -43,10 +60,16 @@
 	._czr__tpc__scroll-block{
 		position: relative;
 		max-width: 1310px;
+		@media @media-size-lg{
+			max-width: 925px;
+		}
 	}
 }
 ._czr__tpc__item-flex{
 	display: flex;
+	@media @media-size-lg{
+		height: 380px;
+	}
 }
 ._czr__tpc__item{
 	margin-right: 160px;
@@ -61,6 +84,10 @@
 		._czr__tpc__item-heading{
 			color: #5d93a3;
 		}
+	}
+	@media @media-size-lg{
+		margin-right: 70px;
+		width: 250px;
 	}
 }
 ._czr__tpc__item-preview{
@@ -77,6 +104,11 @@
 	top: -60px;
 	position: relative;
 	max-width: 205px;
+	@media @media-size-lg{
+		margin-left: 60px;
+		top: -50px;
+		padding: 25px 10px 25px 25px;
+	}
 }
 ._czr__tpc__item-heading{
 	font-family: @regal;
@@ -85,10 +117,14 @@
 	line-height: 32px;
 	margin-bottom: 20px;
 	transition: @transition-site;
+	@media @media-size-lg{
+		font-size: 22px;
+		line-height: 28px;
+	}
 }
 ._czr__modal-coach{
 	.modal-dialog{
-		background: url(../img/maket/coach-modal.jpg) no-repeat 0px -100px;
+		//background: url(../img/maket/coach-modal.jpg) no-repeat 0px -100px;
 		width: 70%;
 	}
 	.modal-content{

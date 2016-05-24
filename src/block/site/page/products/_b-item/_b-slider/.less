@@ -5,10 +5,13 @@
 ._czr__pips__carousel{
 	//background: url('../img/maket/bg-slide2.png') no-repeat left top; 
 	.carousel-inner{
-		height: 980px;
+		//height: 980px;
 		.item{
 			height: 100%;
 			padding: 0 30px;
+			@media @media-size-lg{
+				padding: 0 30px 0 125px;
+			}
 			@media @media-size-xl{
 				padding: 0 90px;
 			}
@@ -31,10 +34,23 @@
 		font-family: @regal-bold;    
 		line-height: 10px;
 	}
+	@media @media-size-lg{
+		padding-top: 100px;
+		font-size: 15px;
+		line-height: 24px;
+		.literal{
+			font-size: 110px;
+		}
+	}
 }
 ._czr__pips__preview{
 	align-items: flex-end;
     display: flex;
+	@media @media-size-lg{
+		img{
+			max-height: 650px;
+		}
+	}
 }
 ._czr__pips__note{
 	border-bottom: 1px solid rgb(93, 147, 163);
@@ -79,13 +95,24 @@
 .slide2{
 	padding-top: 80px;
 	background: url('@{url-path-img}/products/bg-slider-item2.png') no-repeat 100% 100%;
+	@media @media-size-lg{
+		background-size: 830px;
+	}
 	._czr__pips__note-block{
 		width: 73%;
 		padding-top: 60px;
+		@media @media-size-lg{
+			width: 81%;
+		}
 	}
 	._czr__pips__preview{
 		width: 27%;
 		padding-left: 7%;
+		@media @media-size-lg{
+			padding-left: 0%;
+			width: 19%;
+		}
+
 	}
 }
 ._czr__pips__carousel-indicators {
