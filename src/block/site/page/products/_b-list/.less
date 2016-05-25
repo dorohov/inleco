@@ -91,14 +91,15 @@
 			z-index: 1;
 			@media @media-size-lg{
 				left: 90px;
-				font-size: 180px;
-				line-height: 205px;
+				font-size: 160px;
+				line-height: 185px;
 				letter-spacing: 60px;
+				top: 20px
 			}
 		}
 		@media @media-size-lg{
 			.skw-page__content-inner img{
-				max-height: 720px;
+				max-height: 600px;
 			}
 		}
 	}
@@ -245,8 +246,11 @@
 }
 ._czr__modal-products{
 	.modal-dialog{
-		//background: url(../img/maket/products-modal.jpg) no-repeat 0px -150px;
+		//background: url(../img/maket/prod-modal.jpg) no-repeat 0px 0px;
 		width: 70%;
+		@media @media-size-lg{
+			width: 76%;
+		}
 	}
 	.modal-content{
 		//opacity: @opacity;
@@ -255,14 +259,28 @@
     	transform: translateY(-50%) rotate(-90deg);
     	left: -110px;
     	top: 50%;
+		@media @media-size-lg{
+			left: -40px;
+		}
+	}
+	@media @media-size-lg{
+		._in__nav-link{
+			margin-left: 135px;
+		}
 	}
 
 }
 ._czr__ppm__col-left{
 	width: 58%;
+	@media @media-size-lg{
+		width: 48%;
+	}
 }
 ._czr__ppm__col-right{
 	width: 42%;
+	@media @media-size-lg{
+		width: 52%;
+	}
 }
 
 ._czr__ppm__scroll{
@@ -273,6 +291,16 @@
 	.scroll-hide{
 		height:600px;
 		width: 430px;
+	}
+	@media @media-size-lg{
+		max-width: 350px;   
+		padding-left: 95px;
+		.scroll-hide{
+			height: 420px;
+			.scroll-element{
+				height: 107%;
+			}
+		}
 	}
 }
 ._czr__manuf-item{
@@ -286,5 +314,12 @@
 	height: 200px;
 	&:first-child{
 		margin-top: 0;
+	}
+	@media @media-size-lg{
+		max-width: 200px;
+		height: 140px;
+		img{
+			max-width: 150px;
+		}
 	}
 }

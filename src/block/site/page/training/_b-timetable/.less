@@ -120,12 +120,12 @@
 	cursor: pointer;
 	width: 385px;
 	&:hover{
-		._czr__tpc__item-preview{
+		._czr__tptt__item-preview{
 			img{
 				transform: scale(1.1);
 			}
 		}
-		._czr__tpc__item-heading{
+		._czr__tptt__item-heading{
 			color: #5d93a3;
 		}
 	}
@@ -176,8 +176,11 @@
 }
 ._czr__modal-timetable{
 	.modal-dialog{
-		//background: url(../img/maket/timetable-modal.jpg) no-repeat 0px -100px;
+		//background: url(../img/maket/tt-modal.jpg) no-repeat 0px 0px;
 		width: 69%;
+		@media @media-size-lg{
+			width: 76%;
+		}
 	}
 	.modal-content{
 		//opacity: @opacity;
@@ -195,6 +198,11 @@
 		font-family: @regal;
 		letter-spacing: 0;
 		padding-left: 160px;
+		@media @media-size-lg{
+			font-size: 28px;
+			line-height: 34px;
+			padding-left: 130px;
+		}
 	}
 }
 ._czr__tptt__flex-modal{
@@ -206,6 +214,9 @@
 }
 ._czr__tptt__content-flex{
 	padding-left: 160px;
+	@media @media-size-lg{
+		padding-left: 130px;
+	}
 }
 ._czr__tptt__content-left{
 	width: 28%;
@@ -214,6 +225,9 @@
 	line-height: 18px;
 	text-transform: uppercase;    
 	letter-spacing: 1px;
+	@media @media-size-lg{
+		width: 25%;
+	}
 }
 ._czr__tpttm__date{
 	&:before{
@@ -242,6 +256,9 @@
     	line-height: 28px;
 		float: left;
 	}
+	@media @media-size-lg{
+		display: flex;
+	}
 }
 ._czr__tpttm__time{
 	&:before{
@@ -262,6 +279,10 @@
 	> div, p{
 		margin-bottom: 10px;
 	}
+	@media @media-size-lg{
+		font-size: 15px;
+		line-height: 24px;
+	}
 }
 ._czr__tpttm__btn{
 	margin-top: 30px;
@@ -270,14 +291,14 @@
 
 ._czr__modal-timetable-rev{
 	.modal-dialog{
-		//background: url(../img/maket/timetable-rev-modal.jpg) no-repeat 0px -100px;
+		//background: url(../img/maket/tt-rev-modal.jpg) no-repeat 0px 0px;
 		width: 69%;
+		@media @media-size-lg{
+			width: 76%;
+		} 
 	}
 	.modal-content{
 		//opacity: @opacity;
-	}
-	.modal-body{
-
 	}
 	.heading-site-block {
 	    max-width: 950px;    
@@ -289,11 +310,26 @@
 		font-family: @regal;
 		letter-spacing: 0;
 		padding-left: 160px;
+		@media @media-size-lg{
+			font-size: 28px;
+			line-height: 34px;
+			padding-left: 130px;
+		}
 	}
 	.form-reviews{
 		max-width: 960px;
 	    margin: 0;
 	    padding-left: 160px;
+		@media @media-size-lg{
+			padding-left: 130px;
+			max-width: 820px;
+			input{
+				margin-bottom: 20px;
+			}
+			._czr__fr__btn-group{
+				margin-top: 20px;
+			}	
+		}
 	}
 }
 ._czr__tpttr__flex-modal{
@@ -306,16 +342,26 @@
 ._fr__col-left{
 	width: 38%;
 	color:  #a2a2a2;
-	font-size: 16px;
 	font-family: @proxima;
+	font-size: 16px;
 	line-height: 20px;
+	@media @media-size-lg{
+		font-size: 15px;
+		//width: 30%;
+	}
 
 }
 ._fr__col-right{
 	width: 62%;
+	@media @media-size-lg{
+		//width: 70%;
+	}
 }
 ._fr__heading{
 	font-size: 30px;
 	font-family: @regal;
 	color: @base-color;
+	@media @media-size-lg{
+		font-size: 24px;
+	}
 }

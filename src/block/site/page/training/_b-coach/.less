@@ -124,11 +124,14 @@
 }
 ._czr__modal-coach{
 	.modal-dialog{
-		//background: url(../img/maket/coach-modal.jpg) no-repeat 0px -100px;
+		//background: url(../img/maket/couch-modal.jpg) no-repeat 0px 0px;
 		width: 70%;
+		@media @media-size-lg{
+			width: 76%;
+		}
 	}
 	.modal-content{
-		//opacity: @opacity;
+		//opacity: @opacity; 
 	}
 	.modal-body{
 		//background: url('@{url-path-img}/bg/bg-news-right.png') 100% -5px no-repeat;
@@ -146,10 +149,21 @@
     img{
     	margin-left: auto;
     }
+	@media @media-size-lg{
+		width: 47%;
+		padding-left: 110px;
+	}
 }
 ._czr__tpcm__col-right{
 	width: 49%;    
 	padding-top: 110px;
+	@media @media-size-lg{
+		width: 53%;
+		padding-top: 25px;
+	}
+	@media @media-size-lg and (max-height: 680px){		
+		padding-top: 55px;	   
+	}
 }
 ._czr__tpcm__scroll{
 	max-width: 91%;
@@ -162,6 +176,15 @@
 		padding-top: 25px;
 		background: #efefef;
 		position: relative;
+		@media @media-size-lg{
+			width: 500px;
+			height: 440px;
+			margin-left: -40px;
+			padding-left: 40px;
+		}
+		@media @media-size-lg and (max-height: 680px){
+			height: 370px;	   
+		}
 		&:before{
 			content: '';
 			position: absolute;
@@ -196,6 +219,10 @@
 	line-height: 44px;
 	margin:  0 0 10px;
 	padding-left: 50px;
+	@media @media-size-lg{
+		font-size: 28px;
+		line-height: 36px;
+	}
 
 }
 ._czr__tpcm__inner{
