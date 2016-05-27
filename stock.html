@@ -19,7 +19,8 @@
 		<a href="/"  class="_czr__ns__logotip">
 			<span><img src="/img/default/logotip-navbar.png" alt=""></span>
 		</a>		
-		<button class="c-hamburger c-hamburger--htx" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<!--<button class="c-hamburger c-hamburger--htx" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+		<button class="c-hamburger c-hamburger--htx" data-toggle-nav=".navbar-site">
         	<span>toggle menu</span>
         </button>
 	</div>
@@ -29,7 +30,7 @@
 		<a href="https://twitter.com/" class="icon icon-tw" target="_blank"></a>
 	</div>
 
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<div class="navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav _czr__navbar-nav">
 			<li><a href="/about.html">О компании</a></li>
 			<li><a href="/products.html">Продукция</a></li>
@@ -39,6 +40,15 @@
 			<li><a href="/gallery.html">Галерея</a></li>
 			<li><a href="/contacts.html">Контакты</a></li>
 		</ul>
+		<div class=" _czr__navbar-address">
+			<div class="_czr__ih-flex _cb__flex">
+				<div >
+					<a class="link-phone" href="tel:+74959986909">+7 (495) 998‐69‐09</a>
+					<a class="link-mail" href="mailto: info@inleco.ru"><span>info@inleco.ru</span></a>
+				</div>
+				<div>г. Москва, Кутузовский проспект, 36, стр. 4</div>
+			</div>
+		</div>
 	</div>
 </nav>
 
@@ -201,7 +211,7 @@
 					</div>
 				</div>
 			</div>
-			<button type="button" class="btn-modal-close _czr__btn-modal-close" data-dismiss="modal">Закрыть</button> 
+			<button type="button" class="btn-modal-close _czr__btn-modal-close" data-dismiss="modal"><span>Закрыть</span></button> 
 		
 		</div>
 	</div>
@@ -220,7 +230,16 @@
 <script src="/js/storage.js" ></script>
 <script src="/js/device.min.js" ></script>
 <script src="/js/azbn.js" ></script>
+<script src="/js/hamburger.js" ></script>
 
 <script src="/js/document-ready.js" ></script>
+<script>
+	$(window).load(function(){
+		$("[data-toggle-nav]").click(function() {
+			var toggle_el = $(this).data("toggle-nav"); 
+			$(toggle_el).toggleClass("open-sidebar");
+		});
+	})
+</script>
 	</body>
 </html> 

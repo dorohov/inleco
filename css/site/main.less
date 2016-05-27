@@ -4,6 +4,9 @@ body {
 	line-height: 30px;
 	color: @base-color;
 	background: @white;
+	@media @media-size-sm{
+		padding-top: 100px;
+	}
 }
 a{
 	&[href^="mailto:"],
@@ -23,6 +26,9 @@ a{
 			padding-right: @grid_padding;
 			padding-left:  @grid_padding;
 		}
+	}
+	@media @media-device {
+		flex-wrap: wrap;
 	}
 }
 .btn-line{
@@ -69,6 +75,10 @@ a{
 	&:focus{
 		text-decoration: none;
 		outline: none;
+	}
+	@media @media-size-sm{
+		padding: 0 75px;
+		line-height: 64px;
 	}
 }
 .btn-soc{
@@ -215,6 +225,9 @@ a{
 }
 .content-block__inner{
 	padding: 100px 0 20px;
+    @media @media-size-sm{
+		padding: 70px 0 20px;
+    }
 	@media @media-size-lg{
 		padding: 60px 0 20px;
 	}
@@ -222,6 +235,9 @@ a{
 .heading-site-block{
 	display: flex;
 	margin-bottom: 60px;
+	@media @media-size-sm{
+		margin-bottom: 30px;
+	}
 	@media @media-size-lg{
 		margin-bottom: 30px;
 	}
@@ -233,6 +249,12 @@ a{
 	padding-left: 120px;
     letter-spacing: 2px;
     padding-bottom: 15px;
+    @media @media-size-sm{
+    	font-size: 40px;   
+		padding-left: 75px;
+    	letter-spacing: 1px;
+    	padding-bottom: 10px;
+    }	
     @media @media-size-lg{		
 		font-size: 36px;
     }
@@ -285,6 +307,9 @@ a{
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-news-right.png') no-repeat 100% -5px ;
 		position: relative;
+		@media @media-size-sm{
+			background-size: auto, 750px;
+		}
 		@media @media-size-lg{
 			background-size: auto, 750px;
 		}
@@ -295,12 +320,24 @@ a{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-404.png') no-repeat 100% 15px ;
 		position: relative;
 		background-size: auto 100%;
+		@media @media-size-sm-p{
+			background-size: 450px,800px;
+    		background-position: left top, 325px 150%;
+		}
 	}
 }
 .bg-about{	
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-about.png') no-repeat right -90px;
 		position: relative;
+		@media @media-size-sm-p{
+			background-position: top left,360px 50%;
+    		background-size: auto, 750px;
+		}
+		@media @media-size-sm-l{    
+			background-position: top left, 550px 50%;
+			background-size: auto, 870px;
+		}
 		@media @media-size-lg{
     		background-size: auto, auto 100%;
     		background-position: top left, right center;

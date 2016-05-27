@@ -2,22 +2,38 @@
 	//opacity: @opacity;
 	background: url('@{url-path-img}/products/bg-advantage.png') no-repeat right bottom, url('@{url-path-img}/products/bg-advantage-bottom.png') no-repeat left bottom;
 	background-color: @white;
+	@media @media-size-sm-p{
+		background-position: 380px top, left bottom;
+		background-size: auto 100%, auto;
+	}
+	@media @media-size-sm-l{
+		background-position: 590px top, left bottom;
+		background-size: auto 100%, auto;
+	}
 	@media @media-size-lg{
-		.container{
-			width: 100%;
-			max-width: 1210px;
-		}
 		background-size: 650px, auto;
     	background-position: 141% bottom, left bottom;
 	}
-	@media @media-size-xl1660{
-		.container{
-			width: 1600px;
+	.container{
+		@media @media-size-sm-p{
+			width: 730px;    
+			padding-right: 240px;
 		}
+		@media @media-size-sm-l{
+			padding-right: 270px;
+		}
+		@media @media-size-lg{
+			width: 100%;
+			max-width: 1210px;
+		}
+		@media @media-size-xl1660{width: 1600px;}
 	}
 } 
 ._czr__pipa__carousel{
 	//background: url('../img/maket/bg-slide2.png') no-repeat left top; 
+	@media @media-size-sm-p{
+		padding-bottom: 160px;
+	} 
 	.carousel-inner{
 		height: 768px;
 		.item{
@@ -25,6 +41,15 @@
 			max-width:1050px;
 			padding-top: 120px;
 			padding-bottom: 240px;
+		}
+		@media @media-size-sm{
+			min-height: 768px;
+			height: auto;
+			.item{
+				padding-top: 70px;
+				padding-bottom: 120px;
+			}
+
 		}
 		@media @media-size-lg{
 			height: 645px;
@@ -35,12 +60,19 @@
 	height: 100%;
 	flex-direction: column;
 	justify-content: center;
+	@media @media-size-sm {
+		flex-wrap: nowrap;
+	}
 }
 ._czr__pipa__heading{
 	font-size: 48px;
     line-height: 60px;
 	padding-left: 40px;
     margin-bottom: 30px;
+	@media @media-size-sm {
+		font-size: 30px;
+	    line-height: 38px;
+	}
 	@media @media-size-lg{
 		font-size: 36px;
 	    line-height: 44px;
@@ -66,6 +98,13 @@
 	    	font-size: 15px;
 	    	line-height: 25px;			
 		}
+	}
+	@media @media-size-sm{
+		max-width: 470px;
+		margin-bottom: 0;
+	}
+	@media @media-size-sm-l{
+		max-width: 530px;
 	}
 	@media @media-size-lg{
 		max-width: 450px;
@@ -113,6 +152,9 @@
 			color: #5d93a3;
 		}
   	}
+	@media @media-size-sm{
+		bottom: 40px;
+	}
 	@media @media-size-lg{
 		bottom: 115px;
 	}

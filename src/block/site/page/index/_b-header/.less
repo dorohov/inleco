@@ -1,5 +1,6 @@
 ._czr__index-header{
 	//opacity: @opacity;
+	//opacity: 0;
 	color: lighten(@black, 58.5); //#959595
 	text-transform: uppercase;
 	//font-size: 14px;
@@ -12,8 +13,17 @@
 	}
 	.content-block__inner{
 		padding: 42px 0;
-		background: url('@{url-path-img}/index/bg-header.jpg') no-repeat center -140px;
-
+		background: url('@{url-path-img}/index/bg-header.jpg') no-repeat center -140px;	
+		@media @media-size-sm{			
+	    	background-size: 1600px;
+			background-position: center bottom;
+			background-color: @black;
+		}
+		@media @media-size-sm-l{
+			background-size: 1300px;    
+			background-size: 1100px;
+			background-color: @black;
+		}
 	}
 	.container-fluid{
 		height: 100%;
@@ -49,6 +59,9 @@
 			}
 		}
 	}
+	@media @media-size-sm{
+		display: none;
+	}
 	@media @media-size-lg{
 		padding: 0 15px;
 		.link-phone{
@@ -61,6 +74,9 @@
 	bottom: 65px;
     left: 50%;
     transform: translateX(50%);
+	@media @media-size-sm{
+		bottom: 22px;
+	}
 	@media @media-size-lg{
 		bottom: 10px;
 		font-size: 14px;

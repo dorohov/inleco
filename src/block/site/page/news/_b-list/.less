@@ -1,6 +1,9 @@
 ._czr__news-page{
 	//opacity: @opacity;
 	.container{
+		@media @media-size-sm-p{
+			width: 650px;
+		}
 		@media @media-size-lg{
 			width: 100%;
 			max-width: 1130px;
@@ -12,11 +15,23 @@
 }
 ._czr__np-col{
 	width: 50%;
+	@media @media-device{
+		width: 100%;
+	}
+	@media @media-size-sm-l{
+		width: 50%;
+	}
 }
 ._czr__np-item{
 	position: relative;
 	padding-left: 15px;
 	margin-bottom: 20px;
+	@media @media-size-sm-p{
+		padding-left: 125px;
+	}
+	@media @media-size-sm-l{
+		padding-left: 100px;
+	}
 	@media @media-size-lg{
 		padding-left: 110px;
 		margin-bottom: 15px;
@@ -26,7 +41,7 @@
 	}
 	&:hover{
 		._czr__np-item__preview{
-			&:before{
+			a:before{
 				opacity: 1;
 			}
 		}
@@ -39,7 +54,8 @@
 }
 ._czr__np-item__preview{
 	position: relative;
-	&:before{
+
+	a:before{
 		content: '';
 		position: absolute;
 		background: fadeout(@white, 80%);
@@ -53,18 +69,27 @@
 	}
 }
 ._czr__np-item__date{
+    font-family: @regal-italic;
 	font-size: 22px;
-	transform: rotate(-90deg);
-	position: absolute;
     letter-spacing: 1.5px;
+	position: absolute;
     top: 185px;
     left: -80px;
-    font-family: @regal-italic;
-	@media @media-size-lg{
+	transform: rotate(-90deg);
+	@media @media-size-sm-p{
+		top: 155px;
+	}
+	@media @media-size-sm-l{
+		top: 85px;
+		left: -70px;
 		font-size: 18px;
 		line-height: 24px;
+	}
+	@media @media-size-lg{
 		top: 130px;
 		left: -70px;
+		font-size: 18px;
+		line-height: 24px;
 	}
 }
 ._czr__np-item__hblock{
@@ -73,6 +98,14 @@
     margin-left: 115px;
     top: -60px;
     position: relative;
+	@media @media-size-sm-p{
+		padding: 35px 20px 35px 45px;
+		margin-left: 80px;
+	}
+	@media @media-size-sm-l{
+		padding: 20px 20px 35px 25px;
+		margin-left: 50px;
+	}
 	@media @media-size-lg{
 		padding: 22px 15px 35px 30px;
 		margin-left: 60px;
@@ -93,6 +126,14 @@
 			color:#5d93a3;
 		}
 	}
+	@media @media-size-sm{
+		font-size: 26px;
+		line-height: 30px;
+	}
+	@media @media-size-sm-l{
+		font-size: 20px;
+		line-height: 24px;
+	}
 	@media @media-size-lg{
 		font-size: 22px;		
 		line-height: 30px;
@@ -100,15 +141,20 @@
 	}
 }
 ._czr__np-item__note{
-	font-size: 16px;
 	font-family: @proxima-light;
+	font-size: 16px;
 	line-height: 24px;
 	margin-bottom: 35px;
+	@media @media-size-sm-l{
+		font-size: 14px;
+		line-height: 22px;
+	}
 	@media @media-size-lg{
 		font-size: 15px;
 		margin-bottom: 25px;
 	}
-}/*
+}
+/*
 ._czr__in__modal-dialog{
 	background: url(../img/maket/news-modal.jpg) no-repeat top left;
 	.modal-content{
@@ -118,10 +164,24 @@
 ._czr__in__flex{
 	display: flex;
 	height: 100%;
-	align-items: center;
+	@media @media-size-sm-p{
+		flex-direction: column;
+	}
+	@media @media-size-sm-l{			
+		align-items: center;
+	}
+	@media @media-size-sm{
+		padding-top: 80px;
+	}
+	@media @media-screen{		
+		align-items: center;
+	}
 }
 ._czr__in__col{
 	width: 50%;
+	@media @media-size-sm-l{
+		width: 45%;
+	}
 }
 ._czr__in__modal-nav{
 	list-style: none;
@@ -149,6 +209,19 @@
 			}
 		}
 	}
+  	@media @media-size-sm{
+  		> li{
+  			margin-bottom: 18px;
+  			> a{
+				font-size: 24px;
+			}
+  		}  		
+  	}
+  	@media @media-size-sm-l{
+  		> li{
+  			margin-bottom: 30px;
+  		}  		
+  	}
   	@media @media-size-lg{
   		> li{
   			margin-bottom: 25px;
@@ -161,6 +234,9 @@
 ._in__nav-link{
 	margin-left: 160px;  
 	max-width: 400px;
+  	@media @media-size-sm{
+		margin-left: 75px; 
+  	}
   	@media @media-size-lg{
   		margin-bottom: 0;
   	}
@@ -183,12 +259,23 @@
     top: 170px;
     left: -140px;
     color: @base-color;
-		@media @media-size-lg{
+	@media @media-size-sm-p{		
+		transform: rotate(0deg);
+		left: 75px;
+		top: 0;
+	}
+	@media @media-size-sm-l{
 		font-size: 15px;
 		letter-spacing: 6px;
 		top: 110px;
 		left: -90px;
-		}
+	}
+	@media @media-size-lg{
+		font-size: 15px;
+		letter-spacing: 6px;
+		top: 110px;
+		left: -90px;
+	}
 }
 ._czr__in__scroll{
 	position: relative;    
@@ -204,5 +291,28 @@
 				height: 112%;
 			}
   		}
+	}
+	@media @media-size-sm-p{
+		padding-left: 75px;
+		padding-top: 60px;  
+		width: 400px;
+		margin-top: 55px;
+		.scroll-hide{
+			height: 290px;
+			.scroll-element {
+			    height: 107%;
+			}
+		}
+		.scroll-container{
+			top: 55px;
+		}
+	}
+	@media @media-size-sm-l{
+		.scroll-hide{
+			height: 250px;
+			.scroll-element {
+			    height: 107%;
+			}
+		}
 	}
 }

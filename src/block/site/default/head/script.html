@@ -11,5 +11,14 @@
 <script src="/js/storage.js" ></script>
 <script src="/js/device.min.js" ></script>
 <script src="/js/azbn.js" ></script>
+<script src="/js/hamburger.js" ></script>
 
 <script src="/js/document-ready.js" ></script>
+<script>
+	$(window).load(function(){
+		$("[data-toggle-nav]").click(function() {
+			var toggle_el = $(this).data("toggle-nav"); 
+			$(toggle_el).toggleClass("open-sidebar");
+		});
+	})
+</script>

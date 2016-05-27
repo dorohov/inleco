@@ -12,5 +12,21 @@
 		[snp tpl="src/block/site/default/footer/.html" class="footer-site" ]
 		
 		[snp tpl="src/block/site/default/head/script.html" ]
+
+		<link rel="stylesheet" href="/plugins/owl.carousel/owl.carousel.css">
+		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
+		<script >
+			$(document).ready(function() {
+				if (device.mobile() || device.tablet()) {
+					$('._czr__np-item').css('width', 350);
+					$('._czr__nip__list').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 90,
+						nav:false,
+					    items:1
+					});
+				}
+			});
+		</script>
 	</body>
 </html> 

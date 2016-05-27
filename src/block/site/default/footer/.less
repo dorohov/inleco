@@ -14,6 +14,9 @@
 			}
 		}
 	}
+	@media @media-size-sm{
+		padding-top: 70px;
+	}
 }
 ._fs__logotip{
 	margin-bottom: 35px;
@@ -23,6 +26,9 @@
 	}
 	img{
 		margin: 0 auto;
+	}
+	@media @media-size-sm{
+		margin-bottom: 33px;
 	}
 }
 ._fs__navbar{
@@ -50,6 +56,24 @@
 			}
 		}
 	}
+	@media @media-size-sm{
+		flex-wrap: wrap;
+		font-size: 15px;
+		line-height: 24px;
+    	justify-content: space-around;
+    	> li{
+    		> a{
+				letter-spacing: 0.7px;
+				display: block;
+				padding: 9px 0;
+				margin-bottom: 5px;
+    		}
+    	}
+	}
+	@media @media-size-sm-p{
+    	margin: 0 auto;
+    	max-width: 490px;		
+	}
 }
 ._fs__address{
 	text-align: center;
@@ -62,6 +86,12 @@
 		height: 1px;
 		margin: 35px auto;
 	}
+	@media @media-size-sm{
+		margin-top: 30px;
+		&:before{
+			display: none;
+		}
+	}
 }
 ._fs__navbar-soc{
 	text-align: center;
@@ -70,6 +100,9 @@
 		&:before{
 			margin: 0 7px;
 		}
+	}
+	@media @media-size-sm{
+		margin-bottom: 65px;
 	}
 }
 ._fs__dorohovdesign{

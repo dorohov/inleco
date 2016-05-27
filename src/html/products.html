@@ -14,5 +14,28 @@
 		[snp tpl="src/block/site/default/modal/products.html" class="modal-site _czr__modal-news _czr__modal-products" ]
 
 		[snp tpl="src/block/site/default/head/script.html" ]
+
+
+		<link rel="stylesheet" href="/plugins/owl.carousel/owl.carousel.css">
+		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
+		<script >
+			$('#modal-products').on('shown.bs.modal', function (e) {
+				if (device.mobile() || device.tablet()) {
+
+					//$("._czr__manuf-item").appendTo($('#carousel-m .carousel-inner')).addClass('item').eq(0).addClass('active');
+					//$("._czr__manuf-list").appendTo($('._czr__ppm__scroll'));
+					$('._czr__manuf-item').css('width', 175);
+					$('._czr__manuf-list').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 0,
+						nav:false,
+					    items:3 
+					}); 
+					$('._czr__ppm__col-left').css('left', 0);
+					$('._czr__ppm__col-right').css('left', 0);
+					//$(window).trigger('resize');
+				}
+			});
+		</script>
 	</body>
 </html> 

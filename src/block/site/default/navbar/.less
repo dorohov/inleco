@@ -1,6 +1,65 @@
 ._czr__navbar-site{
 	//opacity: @opacity;
 	background: lighten(@black, 12.5); //#202020
+	@media @media-size-sm{
+		.navbar-collapse {
+			position: fixed;
+			top: 100px;
+			width: 100%;
+			height: 100%;
+			display: block;
+			right: -100%;
+			transition: all 0.5s ease;
+			background: url('@{url-path-img}/bg/bg-navbar-sm.png') no-repeat right bottom;
+			background-color: #202020;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			&:before,
+			&:after{
+				display: none;
+			}
+		}
+		&.open-sidebar{
+			top: 0!important;
+			.navbar-collapse {
+				right:0;
+			}
+		}
+	}
+	@media @media-size-sm-l{
+		.navbar-collapse {
+			background-size: auto 100%;
+		}
+	}
+}
+._czr__navbar-address{
+	display: none;
+	color: #959595;
+	font-size: 13px;
+	line-height: 30px;
+	text-transform: uppercase;
+	font-family: @proxima;
+	padding: 0 0 60px 125px;
+	letter-spacing: 2.5px;
+	a{
+		color: #959595;
+	}
+	@media @media-size-sm{
+		display: block;
+	}
+	@media @media-size-sm-l{
+		padding: 0 0 40px 125px;
+	}
+	._czr__ih-flex{
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0;
+		display: flex;
+		div:nth-child(2){
+			order: -1;
+		}
+	}
 }
 ._czr__ns__logotip{
 	display: flex;
@@ -44,6 +103,26 @@
 			}
 		}
 	}
+    @media @media-size-sm{
+		margin: 0;
+		padding: 0 95px 185px;
+    	> li{
+			> a{
+				font-size: 16px;
+				line-height: 48px;
+				display: inline-block;
+				padding: 10px 28px;
+			}
+		}
+    }
+	@media @media-size-sm-l{
+		padding: 0 95px 105px;
+    	> li{
+			> a{
+				line-height: 38px;
+			}
+		}
+	}
     @media @media-size-lg{
     	padding: 13px 22px 12px;
     	> li{
@@ -69,6 +148,12 @@
 			text-align: center;
 			font-size: 16px;
 			transition: @transition-site;
+		    @media @media-size-sm{
+				width: 44px;
+				line-height: 42px;
+				text-align: center;
+				font-size: 22px;
+		    }
 		}
 		&.icon-vk{
 			&:before{
@@ -101,10 +186,14 @@
 			margin-left: 20px;
 		}
 	}
+    @media @media-size-sm{
+		padding: 0px 30px;
+    }
     @media @media-size-lg{
     	height: 75px;
     }
 }
+
 /* -----------------------------------------------------------------------------
 
   HAMBURGER ICONS COMPONENT
@@ -122,9 +211,10 @@
 	position: relative;
 	overflow: hidden;
 	margin: 0;
-	padding: 0;
-	width: 96px;
-	height: 96px;
+	padding: 0;    
+	width: 100px;
+    height: 100px;
+    margin-left: 7px;
 	font-size: 0;
 	text-indent: -9999px;
 	-webkit-appearance: none;
@@ -136,10 +226,6 @@
 	cursor: pointer;
 	transition: background 0.3s;
 	background: none;
-	@media @media-size-xs-l{
-		height: 66px;
-		width: 86px;
-	}
 	@media @media-screen{
 		display: none;
 	}
@@ -149,26 +235,26 @@
 	span {
 		display: block;
 		position: absolute;
-		top: 44px;
-		left: 18px;
-		right: 18px;
-		height: 8px;
-		background: @white;
+		top: 48px;
+		left: 31px;
+		right: 31px;
+		height: 2px;
+		background: #686868;
 		&:before,
 		&:after {
 			position: absolute;
 			display: block;
 			left: 0;
 			width: 100%;
-			height: 8px;
-			background: @white;
+			height: 2px;
+			background: #686868;
 			content: "";
 		}
 		&:before{
-			top: -20px;
+			top: -11px;
 		}
 		&:after {
-			bottom: -20px;
+			bottom: -11px;
 		}
 
 		@media @media-size-xs-l{			

@@ -162,6 +162,9 @@
 .modal-dialog{
   width: 69%;    
   height: 100%;
+  @media @media-size-sm{
+    width: 90%;
+  }
   @media @media-size-lg{
     width: 74%;
   }
@@ -181,28 +184,42 @@
   background: none;
   border: none;
   position: absolute;
-  top: 50%;
-  left: -10px;
-  font-size: 16px;
-  padding-top: 40px;
-  transform: translateY(-50%) rotate(-90deg);
-  text-transform: uppercase;
-  letter-spacing: 10px;
   &:before{
     font-family: @icon;
     content: @icon-close;
-    position: absolute;
-    top: 0%;
-    transform: translateX(-50%);
-    left: 50%;
     font-size: 20px;
     transition: @transition-site;
+    display: block;
   }
   &:hover{
     color: @black;
-    &:before{
-      font-size: 24px;
+  }
+  @media @media-device{
+    top: 36px;
+    right: 39px;
+    span{
+      display: none;
     }
+  }
+  @media @media-screen{    
+    top: 50%;
+    left: -10px;
+    font-size: 16px;
+    padding-top: 40px;
+    transform: translateY(-50%) rotate(-90deg);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    &:before{
+        position: absolute;
+        top: 0%;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+      &:hover{
+        &:before{
+          font-size: 24px;
+        }
+      }
   }
   @media @media-size-lg{
     left: -5px;

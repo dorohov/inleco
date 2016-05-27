@@ -53,7 +53,7 @@ $('._czr__anim-list .anim').hover(
   function(){   
       $(this).removeClass('in').addClass('out');
   }
-)
+);
 $('._czr__anim-indic .anim').hover(
   function(){
     $(this).addClass('in').removeClass('out');
@@ -61,4 +61,4 @@ $('._czr__anim-indic .anim').hover(
   function(){   
       $(this).removeClass('in').addClass('out');
   }
-)
+);
