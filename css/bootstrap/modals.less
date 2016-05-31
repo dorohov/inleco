@@ -162,6 +162,9 @@
 .modal-dialog{
   width: 69%;    
   height: 100%;
+  @media @media-size-xs{
+    width: 100%;
+  }
   @media @media-size-sm{
     width: 90%;
   }
@@ -194,7 +197,15 @@
   &:hover{
     color: @black;
   }
-  @media @media-device{
+  @media @media-size-xs{
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    span{
+      display: none;
+    }
+  }
+  @media @media-size-sm{
     top: 36px;
     right: 39px;
     span{

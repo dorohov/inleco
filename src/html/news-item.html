@@ -17,7 +17,16 @@
 		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
 		<script >
 			$(document).ready(function() {
-				if (device.mobile() || device.tablet()) {
+				if (device.mobile()) {
+					$('._czr__np-item').css('width', 260);	
+					$('._czr__nip__list').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 0,
+						nav:false,
+					    items:1
+					});
+				}
+				if (device.tablet()) {
 					$('._czr__np-item').css('width', 350);
 					$('._czr__nip__list').addClass('owl-carousel').owlCarousel({
 						autoWidth:true,

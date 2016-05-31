@@ -13,13 +13,13 @@
 	}
 	background: linear-gradient(-27deg, rgb(209, 238, 246) 21%, rgb(228, 245, 249)  79%);
 }
-._czr__ip-carousel{
-}
 ._czr__ip-item{		   
+	@media @media-size-xs{
+		flex-direction: column;
+	}	   
 	@media @media-size-sm{
 		flex-direction: column;
 	}
-
 	@media @media-screen{
 		height: 750px;
 	}
@@ -35,13 +35,31 @@
 		position: absolute;
 		left: 50%;
 	}
+	@media @media-size-xs{
+		width: 100%;
+		height: 415px;		
+    	background-position: 70% 50%;
+    	background-size: 590px;
+		img{
+			top: 55px;
+			width: 280px;
+		}
+	}
+	@media @media-size-xs-l{
+		height: 230px;
+	    background-position: 36% 60%;
+	    background-size: 350px;
+		img{
+			top: 30px;
+			width: 150px;
+		}
+	}
 	@media @media-size-sm-p{
 		width: 100%;
 		height: 655px;
 		background-position: 190% 50%;
 		img{
 			top: 100px;
-			transform: translateX(-50%);
 		}
 	}
 	@media @media-size-sm-l{
@@ -51,10 +69,12 @@
 		background-position: 30% 50%;
 		img{
 			top: 120px;
-			width: 330px;
-			transform: translateX(-50%);
+			width: 330px;			
 		}
 	}
+	@media @media-device{
+		img{transform: translateX(-50%)}
+	}		
 	@media @media-screen{		
 		img{
 			top: 130px;
@@ -70,6 +90,10 @@
 	}
 }
 ._czr__ip-note{
+	@media @media-size-xs{
+		width: 100%;
+		padding-bottom: 55px;
+	}
 	@media @media-size-sm{
 		width: 100%;
 	}
@@ -80,6 +104,11 @@
 ._czr__ip-note-flex{
 	max-width: 600px;
 	//transform: translateY(-13px);
+	@media @media-size-xs{ 	    
+		padding-left: 25px;
+		padding-right: 25px;
+		max-width: 100%;
+	}
 	@media @media-size-sm{
 		max-width: 580px;
 		margin: 0 auto;
@@ -97,6 +126,13 @@
 	border-bottom: 1px solid #5d93a3;
 	padding-bottom: 20px;
 	margin-bottom: 30px;
+	@media @media-size-xs{ 	
+		font-size: 15px;
+	    line-height: 22px;  
+		padding-bottom: 25px;
+		margin-bottom: 17px;
+    	text-align: center;
+	}
 	@media @media-size-sm{
 		line-height: 28px;
 		padding-bottom: 30px;
@@ -110,6 +146,11 @@
     font-size: 36px;
     line-height: 48px;
     margin-bottom: 15px;
+	@media @media-size-xs{
+		font-size: 24px;
+	    line-height: 36px;
+	    margin-bottom: 5px;
+	}
 	@media @media-size-sm{
 	    font-size: 40px;
 	    line-height: 52px;
@@ -126,6 +167,11 @@
 	font-size: 26px;
 	line-height: 28px;
 	margin-bottom: 40px;
+	@media @media-size-xs{
+		font-size: 20px;
+		line-height: 22px;
+		//justify-content: center;		
+	}
 	@media @media-size-sm{
 		justify-content: center;
 	}
@@ -135,6 +181,9 @@
 		display: inline-block;
 		margin: 0px 5px 0 13px;
 		vertical-align: middle;
+		@media @media-size-xs{
+			margin: 0px 5px 0 0px;
+		}
 	}
 }
 ._czr__ip-param-ruler{
@@ -146,6 +195,9 @@
     	margin-right: 20px;
     	margin-left: 10px;
     	color: #5d93a3;
+		@media @media-size-xs{
+			margin: 0px 15px 0 0px;
+		}
 	}
 }
 ._czr__ip-control{
@@ -171,8 +223,7 @@
 		color: @black;
 		text-decoration: none;
 	}
-	@media @media-size-sm{
-    	top: 390px;
+	@media @media-device{
 		> div{
 			display: none;
 		}
@@ -180,10 +231,8 @@
 			font-family: @icon;
 			border-radius: 50%;
 			background-color:  #f4fffe;
-			width: 51px;
 			text-align: center;
 			display: block;
-			line-height: 51px;
 			color: #5d93a3;
 			box-shadow: 0px 0px 15px rgb(208, 234, 242);
 		}
@@ -191,6 +240,23 @@
 			&:before{
 				box-shadow: 0px 0px 5px rgb(208, 234, 242);
 			}
+		}
+	}
+	@media @media-size-xs{
+    	top: 250px;
+		&:before{
+			width: 44px;
+			line-height: 44px;
+		}
+	}
+	@media @media-size-xs-l{
+    	top: 125px;
+	}
+	@media @media-size-sm{
+    	top: 390px;
+		&:before{
+			width: 51px;
+			line-height: 51px;
 		}
 	}
 	@media @media-size-lg{
@@ -214,12 +280,11 @@
 			} 
 		}
 	}
-	@media @media-size-sm{
-		left: 30px;
-		&:before{
-			content: @icon-arrow-left;
-		}
+	@media @media-device{
+		&:before{content: @icon-arrow-left;}
 	}
+	@media @media-size-xs{left: 15px;}
+	@media @media-size-sm{left: 30px;}
 	@media @media-size-lg{
 		align-items: flex-start;
 	}
@@ -240,12 +305,12 @@
 			} 
 		}
 	}
-	@media @media-size-sm{
-		right: 40px;
-		&:before{
-			content: @icon-arrow-right;
-		}
+	@media @media-device{
+		&:before{content: @icon-arrow-right;}
 	}
+	@media @media-size-xs{right: 25px;}	
+	@media @media-size-xs-l{right: 15px;}
+	@media @media-size-sm{right: 40px;}
 	@media @media-size-lg{
 		align-items: flex-end;	
 		._czr__ip-control-note{

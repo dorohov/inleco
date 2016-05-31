@@ -14,5 +14,20 @@
 		[snp tpl="src/block/site/default/modal/gallery.html" class="modal-site _czr__modal-gallery" ]
 
 		[snp tpl="src/block/site/default/head/script.html" ]
+		<link rel="stylesheet" href="/plugins/owl.carousel/owl.carousel.css">
+		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
+		<script >
+			$(document).ready(function() {
+				if (device.mobile() || device.tablet()) {
+					$('._czr__gp__owl-item').css('width', 630);
+					$('._czr__gp__owl').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 90,
+						nav:false,
+					    items:1
+					});
+				}
+			});
+		</script>
 	</body>
 </html> 

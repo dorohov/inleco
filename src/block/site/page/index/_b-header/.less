@@ -14,6 +14,14 @@
 	.content-block__inner{
 		padding: 42px 0;
 		background: url('@{url-path-img}/index/bg-header.jpg') no-repeat center -140px;	
+		@media @media-size-xs{
+			background: url('@{url-path-img}/index/bg-header-xs.jpg') no-repeat center bottom;	
+			background-color: @black;
+			padding: 58px 0 0 0;
+		}		
+		@media @media-size-xs-l{
+			background-size: auto 90%;
+		}			
 		@media @media-size-sm{			
 	    	background-size: 1600px;
 			background-position: center bottom;
@@ -59,7 +67,7 @@
 			}
 		}
 	}
-	@media @media-size-sm{
+	@media @media-device{
 		display: none;
 	}
 	@media @media-size-lg{
@@ -74,6 +82,19 @@
 	bottom: 65px;
     left: 50%;
     transform: translateX(50%);
+	@media @media-size-xs{
+	    bottom: 20px;
+		left: 43%;
+	}
+	@media @media-size-xs-l{
+	    bottom: 15px;
+		left: 48%;
+		&.btn-scroll:before {
+		    width: 27px;
+		    font-size: 12px;
+		    line-height: 25px;
+		}
+	}
 	@media @media-size-sm{
 		bottom: 22px;
 	}

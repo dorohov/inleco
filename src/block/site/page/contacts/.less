@@ -3,19 +3,13 @@
 	font-family: @regal;
 	font-size: 22px;
 	line-height: 30px;
-	a{
-		color: @base-color;
-	}
-    @media @media-size-lg{
-    	font-size: 18px;
-    }
+	a{color: @base-color;}
+    @media @media-size-xs{font-size: 18px;}
+    @media @media-size-lg{font-size: 18px;}
 }
 ._czr__cp__flex{
 	display: flex;
-	//@media @media-size-sm-p{
-	@media @media-size-sm{
-		flex-direction: column;
-	}
+	@media @media-device{flex-direction: column;}
 }
 ._czr__cp__content{
 	width: 59%;
@@ -23,6 +17,11 @@
 		padding-top: 120px;
 		background-size: 690px;
 		min-height: 870px;
+    	@media @media-size-xs{
+    		padding: 95px 0 60px;
+    		min-height: inherit;    
+    		background-size: auto, 550px;
+    	}
     	@media @media-size-sm{
     		padding-top: 70px;
     		min-height: 620px;
@@ -34,38 +33,31 @@
 	}
 	.heading-site-block{
 		margin-bottom: 35px;
-	    @media @media-size-lg{
-			margin-bottom: 25px;
-		}
+	    @media @media-size-xs{margin-bottom: 25px;}
+	    @media @media-size-lg{margin-bottom: 25px;}
     }
-	//@media @media-size-sm-p{
-	@media @media-size-sm{
-		width: 100%;
-	}/*
-	@media @media-size-sm-l{
-		width: 50%;
-	}*/
+    .heading-site{    	
+	    @media @media-size-xs{padding-left: 25px;}
+    }
+	@media @media-device{width: 100%;}
 }
 ._czr__cp__map{
 	width: 41%;
 	height: 870px;
-	//@media @media-size-sm-p{
-	@media @media-size-sm{
-		width: 100%;
-		height: 450px; 
-	}/*
-	@media @media-size-sm-l{
-		width: 50%;
-		height: 620px; 
-	}*/
-	@media @media-size-lg{
-		height: 695px;
-	}
+	@media @media-device{width: 100%;}
+	@media @media-size-xs{height: 300px;}
+	@media @media-size-xs-l{height: 250px;}
+	@media @media-size-sm{height: 450px;}
+	@media @media-size-lg{height: 695px;}
 }
 ._czr__cp__content-inner{
 	padding: 0 20px;
     max-width: 565px;
     margin: 0 auto;
+	@media @media-size-xs{
+		padding: 0 25px;
+		max-width: 100%; 
+	}
 	@media @media-size-sm{
     	max-width: 530px;
 	}
@@ -75,6 +67,7 @@
 }
 ._cp__item{
 	margin-bottom: 20px;
+	@media @media-size-xs{margin-bottom: 15px}
 	@media @media-size-lg{
 		margin-bottom: 15px;
 		&._cp__item-tel{
@@ -90,6 +83,11 @@
 	font-size: 24px;
     letter-spacing: 2.8px;
     margin-bottom: 20px;
+	@media @media-size-xs{
+		font-size: 18px;
+		letter-spacing: 2.5px;
+		margin-bottom: 10px;
+	}
 	@media @media-size-sm{
 		margin-bottom: 15px;
 	}
@@ -103,23 +101,28 @@
 	font-size: 14px;	
     letter-spacing: 1.5px;
 	text-transform: uppercase;
+	@media @media-size-xs{font-size: 12px;}
 }
 ._cp__item-btn{
 	margin-top: 40px;
-	@media @media-size-lg{
-		margin-top: 25px;
-	}
+	@media @media-size-xs{margin-top: 20px;}
+	@media @media-size-lg{margin-top: 25px;}
 }
 ._czr__cp__modal-dialog{
 	width: 59%;
 	//background: url(../img/maket/cont-modal.jpg) no-repeat 0 0;
-	
 	.modal-content{
 		//opacity: @opacity;
+		@media @media-size-xs{   
+			overflow: scroll;
+		}
 	}
 	.modal-body{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-news-right.png') no-repeat 100% -5px ;
 		background-size: auto, 750px;
+	}	 
+	@media @media-size-xs{ 
+		width: 100%;
 	}
 	@media @media-size-sm{
 		width: 90%;
@@ -141,10 +144,15 @@
     justify-content: center;
     .heading-site-block{
     	margin-bottom: 37px;
-		@media @media-size-sm{
-			 margin-bottom: 25px;
-		}
+		@media @media-size-xs{margin-bottom: 20px;}
+		@media @media-size-sm{margin-bottom: 25px;}
     }
+	@media @media-size-xs{
+		height: auto;
+		padding-top: 35px;
+		padding-bottom: 30px;
+		.link-modal-close{display: none;}
+	}
 }
 .form-reviews{    
 	width: 480px;
@@ -160,7 +168,12 @@
 			color: #aaaaaa;
 			font-size: 18px;
 			line-height: 36px;
+			@media @media-size-xs{
+				font-size: 14px;
+				line-height: 32px;
+			}
 		}
+		
 		&:-moz-placeholder {
 			color: #aaaaaa;
 			font-size: 18px;
@@ -185,22 +198,34 @@
     	padding: 13px 18px;
     	height: 100px;
 	}
+	@media @media-size-xs{
+	    width: 270px;
+    	padding-right: 40px;
+		input{margin-bottom: 20px;}
+		textarea{    
+			height: 65px;
+			margin-bottom: 15px;
+		} 
+	}
+	@media @media-size-xs-l{
+		width: 340px;
+    	margin-left: 35px;
+	}
 	@media @media-size-sm{
-		input{
-			margin-bottom: 40px;
-		}
-		textarea{	
-			margin-bottom: 20px;
-		}
+		input{margin-bottom: 40px;}
+		textarea{margin-bottom: 20px;}
 	}
 }
 ._czr__fr__note{
 	font-size: 18px;
 	line-height: 22px;
 	margin-bottom: 23px;
-	@media @media-size-sm{
-		margin-bottom: 30px;
+	@media @media-size-xs{
+		font-size: 14px;
+		line-height: 17px;
+		margin-bottom: 15px;
 	}
+	@media @media-size-sm{margin-bottom: 30px;}
 }
 ._czr__fr__btn-group{
 	.btn-line{

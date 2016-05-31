@@ -4,6 +4,10 @@ body {
 	line-height: 30px;
 	color: @base-color;
 	background: @white;
+	@media @media-size-xs{
+		font-size: 15px;
+		line-height: 22px;
+	}
 	@media @media-size-sm{
 		padding-top: 100px;
 	}
@@ -75,6 +79,13 @@ a{
 	&:focus{
 		text-decoration: none;
 		outline: none;
+	}
+	@media @media-size-xs{
+		display: block;
+		text-align: center;
+		max-width: 280px;
+		margin: 0 auto;
+		width: 100%;
 	}
 	@media @media-size-sm{
 		padding: 0 75px;
@@ -161,6 +172,19 @@ a{
     		background: lighten(@black, 30%);    		
     	}
     }
+    @media @media-size-xs{
+    	background: 0 0;
+		font-size: 16px;
+		top: 295px;
+		left: -126px;
+		padding: 90px 0 0;
+		height: 0;
+		span{
+			text-indent: -9999px;
+		    display: inline-block;
+		    overflow: hidden;
+		}
+    }
     @media @media-size-lg{
     	top: 285px;    
     	font-size: 14px;
@@ -222,25 +246,23 @@ a{
 	//min-height: 3000px;
 	//background: linear-gradient(-27deg, rgba(43, 73, 140, 0.3) 7%, rgba(255, 255, 255, 0.3) 93%);
 	background: linear-gradient(-27deg, rgb(240, 240, 241) 7%, rgb(237, 238, 240) 93%);
+	.container {
+		@media @media-size-xs{padding: 0 25px;}
+	}
 }
 .content-block__inner{
 	padding: 100px 0 20px;
-    @media @media-size-sm{
-		padding: 70px 0 20px;
-    }
-	@media @media-size-lg{
-		padding: 60px 0 20px;
-	}
+	@media @media-size-xs-p{padding: 95px 0 20px;}
+	@media @media-size-xs-l{padding: 90px 0 20px;}
+    @media @media-size-sm{padding: 110px 0 20px;}
+	@media @media-size-lg{padding: 60px 0 20px;}
 }
 .heading-site-block{
 	display: flex;
 	margin-bottom: 60px;
-	@media @media-size-sm{
-		margin-bottom: 30px;
-	}
-	@media @media-size-lg{
-		margin-bottom: 30px;
-	}
+	@media @media-size-xs{margin-bottom: 25px;}
+	@media @media-size-sm{margin-bottom: 30px;}
+	@media @media-size-lg{margin-bottom: 30px;}
 }
 .heading-site-inner{}
 .heading-site{
@@ -249,6 +271,12 @@ a{
 	padding-left: 120px;
     letter-spacing: 2px;
     padding-bottom: 15px;
+	@media @media-size-xs{
+		font-size: 24px;
+		padding-left: 25px;
+    	letter-spacing: 0.7px;
+    	padding-bottom: 10px;
+	}
     @media @media-size-sm{
     	font-size: 40px;   
 		padding-left: 75px;
@@ -307,22 +335,36 @@ a{
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-news-right.png') no-repeat 100% -5px ;
 		position: relative;
-		@media @media-size-sm{
-			background-size: auto, 750px;
-		}
-		@media @media-size-lg{
-			background-size: auto, 750px;
-		}
+		@media @media-size-xs{background-size: auto, 420px;}
+		@media @media-size-sm{background-size: auto, 750px;}
+		@media @media-size-lg{background-size: auto, 750px;}
 	}
 }
 .bg-404{	
 	.content-block__inner{
-		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-404.png') no-repeat 100% 15px ;
+		background:url('@{url-path-img}/bg/bg-404.png') no-repeat 100% 15px, url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left ;
 		position: relative;
 		background-size: auto 100%;
+		@media @media-size-xs{
+			background-size: auto 40%, auto;
+    		background-position: bottom center, left top;
+		}
+		@media @media-size-xs-l{
+			//background-size: auto 80%,auto;
+    		//background-position: 150% 100%,left top;
+    		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left ;
+		}
+		@media @media-size-xs-4{
+			background-size: auto 30%, auto;
+    		background-position: bottom center, left top;
+		}
+		/*@media @media-size-xs-4-l{
+			background-size: auto 80%,auto;
+    		background-position: 170% 100%,left top;
+		}*/
 		@media @media-size-sm-p{
-			background-size: 450px,800px;
-    		background-position: left top, 325px 150%;
+			background-size: 800px, 450px;
+    		background-position: 325px 150%, left top;
 		}
 	}
 }
@@ -330,6 +372,14 @@ a{
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-about.png') no-repeat right -90px;
 		position: relative;
+		@media @media-size-xs{
+			background-size: auto, 100%;
+    		background-position: top left, center 140%;
+		}
+		@media @media-size-xs-l{
+			background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left;
+
+		}
 		@media @media-size-sm-p{
 			background-position: top left,360px 50%;
     		background-size: auto, 750px;
@@ -348,6 +398,12 @@ a{
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-training.png') no-repeat right bottom, url('@{url-path-img}/bg/bg-romb-bottom.png') no-repeat left bottom;
 		position: relative;
+		@media @media-size-sm{
+			background: url('@{url-path-img}/bg/bg-training-sm-l.png') no-repeat right bottom, url('@{url-path-img}/bg/bg-romb-bottom.png') no-repeat left bottom;	
+		}
+		@media @media-size-sm-l{
+			background-size: auto 100%, auto;
+		}
 		@media @media-size-lg{
 			background-size: 820px, auto;
 		}
@@ -369,9 +425,8 @@ a{
 	.content-block__inner{
 		background: url('@{url-path-img}/bg/bg-news-left.png') no-repeat top left, url('@{url-path-img}/bg/bg-news-right.png') no-repeat 100% -5px ;
 		position: relative;
-		@media @media-size-lg{
-			background-size: auto, 750px;
-		}
+		@media @media-size-sm{background-size: auto, 590px;} 
+		@media @media-size-lg{background-size: auto, 750px;}
 	}
 }
 /*anim*/

@@ -62,9 +62,20 @@
 						<span class="heading-line"></span>
 					</div>
 				</div>
-					<div class="_czr__gp__inner">
-						<div class="_czr__gp__note">Компания Инлеко проводит обучение на базе учебного центра РУДН. Данный центр оснащен всем необходимым для проведения семинаров, мастер-классов и т.д. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed</div>
+				<div class="_czr__gp__inner">
+					<div class="_czr__gp__note">Компания Инлеко проводит обучение на базе учебного центра РУДН. Данный центр оснащен всем необходимым для проведения семинаров, мастер-классов и т.д. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed</div>
+				</div>
+				<div class="_czr__gp__owl">
+					<div class="_czr__gp__owl-item">
+						<img src="/img/gallery/gallery-item1.jpg" alt="">
 					</div>
+					<div class="_czr__gp__owl-item ">
+					  	<img src="/img/gallery/gallery-item2.jpg" alt="">
+					</div>
+					<div class="_czr__gp__owl-item ">
+					  	<img src="/img/gallery/gallery-item3.jpg" alt="">
+					</div>
+				</div>
 				
 
 			</div>
@@ -155,5 +166,20 @@
 		});
 	})
 </script>
+		<link rel="stylesheet" href="/plugins/owl.carousel/owl.carousel.css">
+		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
+		<script >
+			$(document).ready(function() {
+				if (device.mobile() || device.tablet()) {
+					$('._czr__gp__owl-item').css('width', 630);
+					$('._czr__gp__owl').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 90,
+						nav:false,
+					    items:1
+					});
+				}
+			});
+		</script>
 	</body>
 </html> 

@@ -2,17 +2,11 @@
 	background: #ebecef;
 	//opacity: @opacity;
 	.content-block__inner{
-		padding: 0 0 60px;
+		@media @media-notphone{padding: 0 0 60px;}
 	}
-	@media @media-size-sm{
-		.container {
-		    width: 640px;
-		}
-	}
-	@media @media-size-xl{
-		.container {
-		    width: 1310px;
-		}
+	.container {
+		@media @media-size-sm{width: 640px;}
+		@media @media-size-xl{width: 1310px;}
 	}
 	.heading-site-block{
 		margin-bottom: 30px;
