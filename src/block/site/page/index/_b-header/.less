@@ -11,13 +11,15 @@
 		color: inherit;
 		text-decoration: none;
 	}
+	@media @media-size-lg{font-size: 12px;}
 	.content-block__inner{
 		padding: 42px 0;
 		background: url('@{url-path-img}/index/bg-header.jpg') no-repeat center -140px;	
+		background-color: @black;
 		@media @media-size-xs{
 			background: url('@{url-path-img}/index/bg-header-xs.jpg') no-repeat center bottom;	
-			background-color: @black;
 			padding: 58px 0 0 0;
+		background-color: @black;
 		}		
 		@media @media-size-xs-l{
 			background-size: auto 90%;
@@ -25,26 +27,28 @@
 		@media @media-size-sm{			
 	    	background-size: 1600px;
 			background-position: center bottom;
-			background-color: @black;
 		}
 		@media @media-size-sm-l{
 			background-size: 1300px;    
 			background-size: 1100px;
-			background-color: @black;
+		}
+		@media @media-size-lg{
+			background-size: contain;
+			background-position: center bottom;
+			padding: 30px 0;
+		}
+		@media @media-screen-5-4-lg{
+			background-size: 120% auto;
+		}
+		@media @media-size-xl1680{
+			background-size: contain;
+			background-position: center bottom;
+			padding: 30px 0;
 		}
 	}
 	.container-fluid{
 		height: 100%;
 		position: relative;
-	}
-	@media @media-size-lg{
-		font-size: 12px;
-		.content-block__inner{
-			background-size: contain;
-			background-position: center bottom;
-			padding: 30px 0;
-			background-color: @black;
-		}
 	}
 }
 ._czr__ih-flex{
@@ -79,7 +83,7 @@
 }
 ._czr__ih-btn-scroll{
 	position: absolute;
-	bottom: 65px;
+	bottom: 10px;
     left: 50%;
     transform: translateX(50%);
 	@media @media-size-xs{
@@ -95,11 +99,8 @@
 		    line-height: 25px;
 		}
 	}
-	@media @media-size-sm{
-		bottom: 22px;
-	}
+	@media @media-size-sm{bottom: 22px;}
 	@media @media-size-lg{
-		bottom: 10px;
 		font-size: 14px;
     }
 }

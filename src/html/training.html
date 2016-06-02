@@ -22,5 +22,27 @@
 		[snp tpl="src/block/site/default/modal/timetable-reviews.html" class="modal-site _czr__modal-timetable-rev" ]
 
 		[snp tpl="src/block/site/default/head/script.html" ]
+		<link rel="stylesheet" href="/plugins/owl.carousel/owl.carousel.css">
+		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
+		<script >
+			$(document).ready(function() {
+				if (device.mobile()) {
+					$('._czr__tpc__item-flex ._czr__tpc__item').css('width', 230);
+					$('._czr__tpc__item-flex').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 0,
+						nav:false,
+					    items:1
+					});
+					$('._czr__tptt__item-flex ._czr__tptt__item').css('width', 230);
+					$('._czr__tptt__item-flex').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 0,
+						nav:false,
+					    items:1
+					});
+				}				
+			});
+		</script>
 	</body>
 </html> 

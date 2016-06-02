@@ -18,11 +18,20 @@
 		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
 		<script >
 			$(document).ready(function() {
-				if (device.mobile() || device.tablet()) {
+				if (device.tablet()) {
 					$('._czr__gp__owl-item').css('width', 630);
 					$('._czr__gp__owl').addClass('owl-carousel').owlCarousel({
 						autoWidth:true,
 						margin: 90,
+						nav:false,
+					    items:1
+					});
+				}
+				if (device.mobile()) {
+					$('._czr__gp__owl-item').css('width', 260);
+					$('._czr__gp__owl').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 30,
 						nav:false,
 					    items:1
 					});

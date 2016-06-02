@@ -180,10 +180,12 @@
 				letter-spacing: 60px;
 				top: 20px;
 			}
-		}
-		@media @media-size-lg{
-			.skw-page__content-inner img{
-				max-height: 600px;
+			@media @media-size-xl1680{
+				top: 60px;
+				left: 20%;
+				right: 0;
+				font-size: 150px;
+				line-height: 210px;
 			}
 		}
 	}
@@ -224,6 +226,16 @@
 				letter-spacing: 90px;
 	
 			}
+		}
+	}
+	@media @media-size-lg{
+		img{
+			max-height: 600px;
+		}
+	}
+	@media @media-size-xl1680{
+		img{
+			max-height: 700px;
 		}
 	}
 }
@@ -337,6 +349,9 @@
 		font-size: 30px;
 		padding-left: 120px;
 	}
+	@media @media-size-xl1680{
+		padding-left: 100px;
+	}
 }
 .skw-page__description {
 	font-size: 17px;
@@ -362,6 +377,10 @@
 		font-size: 15px;
 		line-height: 24px;
 		max-width: 550px;
+	}
+	@media @media-size-xl1680{
+		padding-left: 100px;
+		max-width: 600px;
 	}
 }
 .skw-page__param{
@@ -492,17 +511,18 @@
 	.modal-dialog{
 		//background: url(../img/maket/prod-modal.jpg) no-repeat 0px 0px;
 		width: 70%;
-		@media @media-size-sm{
-			width: 90%;
-		}
-		@media @media-size-lg{
-			width: 76%;
-		}
+		@media @media-size-xs{width: 100%;}
+		@media @media-size-sm{width: 90%;}
+		@media @media-size-lg{width: 76%;}
+		@media @media-size-xl1680{width: 90%;}
 	}
 	.modal-content{
 		//opacity: @opacity;
 	}
 	.modal-body{
+		@media @media-size-xs{
+			overflow: scroll;
+		}
 		@media @media-size-sm{
 			justify-content: space-between;
 		    padding-bottom: 50px;    
@@ -510,6 +530,7 @@
 		}
 	}
 	._in__nav-arh-name{
+		@media @media-size-xs{display: none;}
 		@media @media-size-sm{
 			position: relative;
 			left: 0;
@@ -535,6 +556,7 @@
 }
 ._czr__ppm__col-left{
 	width: 58%;
+	@media @media-size-xs{width: 100%;}
 	@media @media-size-sm{
 		width: 100%;
     	._czr__in__modal-nav{
@@ -559,6 +581,7 @@
 }
 ._czr__ppm__col-right{
 	width: 42%;
+	@media @media-size-xs{width: 100%;}
 	@media @media-size-sm{
 		width: 100%;		
 		left: -100%;
@@ -579,11 +602,9 @@
 		height:600px;
 		width: 430px;
 	}
-	@media @media-size-sm{
+	@media @media-device{
 		max-width: inherit;
-    	overflow: inherit;   
-		padding-left: 75px;
-		padding-right: 75px;
+    	overflow: inherit; 
     	.scroll-hide{
     		width: inherit;
     		height: inherit;
@@ -599,6 +620,15 @@
     	.scroll-container{
     		display: none;
     	}
+	}
+	@media @media-size-xs{		  
+		padding-left: 0;
+		padding-right: 0;
+		margin-right: -50px;
+	}
+	@media @media-size-sm{		  
+		padding-left: 75px;
+		padding-right: 75px;
 	}
 	@media @media-size-lg{
 		max-width: 350px;   
@@ -623,7 +653,7 @@
 	&:first-child{
 		margin-top: 0;
 	}
-	@media @media-size-sm{
+	@media @media-device{
 		height: 110px;
 		padding: 10px 25px;
 	}
