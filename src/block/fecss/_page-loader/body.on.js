@@ -1,4 +1,3 @@
-
 $(document.body).on('click.fecss.page-loader.close-loader', '.page-loader .close-loader', {}, function(event){
 	event.preventDefault();
 	

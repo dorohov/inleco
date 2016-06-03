@@ -3180,7 +3180,8 @@
 	display: flex;
 	height: 100%;
 	@media @media-size-xs{
-		flex-direction: column;
+		display: block;
+		//flex-direction: column;
 		padding: 25px 50px 25px 30px;
 		overflow: scroll;
 	}
@@ -3220,6 +3221,9 @@
 			}
 		}
 	}
+  	@media @media-size-xs{
+  		display: block;
+  	}
   	@media @media-size-sm{
   		> li{margin-bottom: 18px;
   			> a{font-size: 24px;}
@@ -3394,6 +3398,12 @@
 			left: -231px;
 		}
 	}
+	@media @media-size-xs-4{
+		min-height: 180vh;
+		._czr__btn-pub{
+			top: 200px;
+		}
+	}
 	@media @media-size-xs-l{
 		min-height: 220vh;
 		._czr__btn-pub{
@@ -3450,6 +3460,9 @@
 	}
 	@media @media-size-xs{
 		min-height: 72vh;
+	}
+	@media @media-size-xs-4{
+		min-height: 74vh;
 	}
 	@media @media-size-xs-l{
 		min-height: 100vh; 
@@ -3625,6 +3638,9 @@
 	@media @media-size-xs{
 		top: 72%;
 		min-height: 180vh;
+	}
+	@media @media-size-xs-4{
+		top: 74%;
 	}
 	@media @media-size-xs-l{
 		top: 100%;
@@ -3829,6 +3845,9 @@
 	    	right: 20px; 
 	    }
 	}
+	@media @media-size-xs-4{		
+	    top: 42%;
+	}
 	@media @media-size-sm{
 	    top: 47%;
 		&.next{
@@ -3876,6 +3895,7 @@
 	.modal-body{
 		@media @media-size-xs{
 			overflow: scroll;
+			display: block;
 		}
 		@media @media-size-sm{
 			justify-content: space-between;
@@ -4203,7 +4223,8 @@
 		//background: url('@{url-path-img}/bg/bg-news-right.png') 100% -5px no-repeat;
 		background-size: 850px;
 		@media @media-size-xs{
-			flex-direction: column;
+			display: block;
+			//flex-direction: column;
 			padding: 25px 45px 25px 25px;
 			overflow: scroll;
 		}

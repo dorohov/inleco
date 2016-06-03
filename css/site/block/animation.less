@@ -1,0 +1,114 @@
+._czr__anim-list{
+	list-style: none;
+	.anim{		
+		padding-left: 65px;
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		padding-bottom: 5px;
+		text-decoration: none;
+		&:before{
+			content: '';
+			background-color:  #5d93a3;
+			width: 50px;
+			height: 1px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transition: @transition-site; 
+		}
+		&.in{
+			&:before{
+				animation-name: andown;
+				animation-duration: 2s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+			}
+		}
+		&.out{
+			&:before{
+				animation-fill-mode: both;
+				animation-name: andown2;
+				animation-duration: 1.5s;
+				animation-iteration-count: 1;
+			}
+		}
+	}
+}
+@keyframes andown {
+	from {
+		left: 0;
+		top: 50%;
+		width: 50px;
+	}
+	40% {
+		top: 98%;
+	}
+	60% {
+		left: 65px;
+	}
+	80% {
+		width: 99%;
+	}
+	to{
+		top: 98%;
+		width: 100%;
+		left: 65px;
+
+	}
+}
+@keyframes andown2 {
+	from{
+		top: 98%;
+		width: 100%;
+		left: 65px;
+
+	}
+	50% {
+		top: 98%;
+		width: 50px;
+	}
+	to {
+		left: 0;
+		top: 50%;
+		width: 50px;
+	}  
+}
+._czr__anim-indic{	
+	.in{
+		&:before{
+			animation-name: anim-indic-in;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+	}
+	.out{
+		&:before{
+			animation-fill-mode: both;
+			animation-name: anim-indic-out;
+			animation-duration: 1.5s;
+			animation-iteration-count: 1;
+		}
+	}
+}
+@keyframes anim-indic-in {
+	from {
+		top: 50%;
+	}
+	to{
+		top: 115%;
+		height: 2px;
+		background: lighten(#5d93a3, 30%);
+	}
+}
+@keyframes anim-indic-out {
+	from{
+		top: 115%;
+		height: 2px;
+		background: lighten(#5d93a3, 30%);
+	}
+	to {
+		top: 50%;
+	}  
+}

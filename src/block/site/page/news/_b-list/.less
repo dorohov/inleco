@@ -191,7 +191,8 @@
 	display: flex;
 	height: 100%;
 	@media @media-size-xs{
-		flex-direction: column;
+		display: block;
+		//flex-direction: column;
 		padding: 25px 50px 25px 30px;
 		overflow: scroll;
 	}
@@ -231,6 +232,9 @@
 			}
 		}
 	}
+  	@media @media-size-xs{
+  		display: block;
+  	}
   	@media @media-size-sm{
   		> li{margin-bottom: 18px;
   			> a{font-size: 24px;}
