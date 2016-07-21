@@ -1,4 +1,5 @@
 	
+	/*
 	$('.scroll-container').each(function(index){
 		
 		var block = $(this);
@@ -76,4 +77,5 @@
 		});
 		
 	});
+	*/
 	
