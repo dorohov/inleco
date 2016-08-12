@@ -1,3 +1,4 @@
+/*
  var curPage = 1;
   var numOfPages = $(".skw-page").length;
   var animTime = 1000;
@@ -45,3 +46,306 @@
       navigateDown();
     }
   });
+*/
+
+
+  
+  
+  
+  
+  
+  
+  
+
+$(function() {
+	
+	//$('.bottom-bordered .bb-help').tooltip();
+	
+	var block = $('.skw-pages').eq(0);
+	var scrolling;
+	
+	var can_scroll = function(timeout){
+		if(timeout) {
+			setTimeout(function(){
+				scrolling = false;
+			}, timeout);
+		} else {
+			scrolling = false;
+		}
+	};
+	
+	can_scroll();
+	
+	block
+		.find('.skw-page__indicators')
+			.empty()
+		.end()
+		.find('.skw-page').each(function(index){
+			
+			var slide = $(this);
+			slide
+				.attr('data-slide-id', index)
+			;
+			block.find('.skw-page__indicators').append('<li></li>');
+			
+		})
+			.removeClass('active')
+			.addClass('inactive')
+			.eq(0)
+				.toggleClass('inactive active')
+			.end()
+			.end()
+			.find('.skw-page__indicators li')
+				.eq(0)
+					.addClass('active');
+	;
+	block.attr('data-slide-id', 0);
+	
+	/*
+	//генерация переключателей
+	
+	var s_size = block.find('.fullscreen-content .b-azbn-slide').size();
+	if(s_size && !screenJS.isXS() && !screenJS.isSM() && !device.mobile() && !device.tablet()) {
+		
+		block.css({
+			top : ($('.b-top-header').outerHeight(true) + $('.b-top-menu').outerHeight(true)) + 'px',
+		})
+		
+		var ul = block.find('.fullscreen-content .content-pagination ul');
+		ul.empty();
+		
+		block.find('.fullscreen-content .b-azbn-slide').each(function(index){
+			
+			var s = $(this);
+			var slide_id = s.attr('data-slide-id');
+			
+			ul.append('<li><a href="#-" data-slide-id="' + slide_id + '" ></a></li>');
+			
+			ul.find('li a').on('click.azbn', function(event){
+				event.preventDefault();
+				
+				var btn = $(this);
+				var next = parseInt(btn.attr('data-slide-id'));
+				
+				block.attr('data-slide-id', next);
+				block.trigger('azbn.wheel', [{diff:0, next:next, callback:function(){
+					can_scroll(451);
+				}}]);
+			})
+			
+		});
+		
+		$('#b-azbn-diy-selfibot-container-slide-count').html(s_size);
+	}
+	*/
+	
+	
+	
+	if(block.size() && !screenJS.isXS() && !screenJS.isSM() && !device.mobile() && !device.tablet()) {
+		
+		$(document.body).on('azbn.wheel', '.skw-pages', {}, function(event, obj){
+			event.preventDefault();
+			
+			var cb = obj.callback;
+			
+			if(obj.next == block.find('.skw-page').length) {
+				
+			} else {
+				
+				//event.preventDefault();
+				
+				block.find('.skw-page')
+					.filter('.active')
+						.toggleClass('inactive active')
+					.end()
+					.eq(obj.next)
+						.toggleClass('inactive active')
+				;
+				
+				block.find('.skw-page__indicators li')
+					.filter('.active')
+						.removeClass('active')
+					.end()
+					.eq(obj.next)
+						.addClass('active')
+				;
+				
+			}
+			
+			
+			cb();
+		});
+		
+		$(document.body).on('wheel mousewheel DOMMouseScroll MozMousePixelScroll', '.skw-page', {}, function(event) {
+			//event.preventDefault();
+			//diff:event.originalEvent.wheelDelta
+			
+			if(scrolling) {
+				
+				event.preventDefault();
+				
+				return;
+				
+			} else {
+				
+				scrolling = true;
+				//$(document.body).trigger('fecss.wheel-block.set', [{diff:event.originalEvent.wheelDelta}]);
+				
+				var diff = (-event.originalEvent.deltaY) || event.originalEvent.detail || event.originalEvent.wheelDelta;
+				//console.log(diff);
+				var slide = parseInt(block.attr('data-slide-id'));
+				//var now = slide;
+				var next;
+				
+				if(diff > 0) {
+					
+					event.preventDefault();
+					
+					if(slide > 0) {
+						
+						next = slide - 1;
+						block.attr('data-slide-id', next);
+						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
+							can_scroll(451);
+						}}]);
+						
+					} else {
+						
+						can_scroll();
+						
+					}
+				} else if(diff < 0) {
+					
+					if(slide < block.find('.skw-page').length) {
+						
+						event.preventDefault();
+						
+						next = slide + 1;
+						block.attr('data-slide-id', next);
+						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
+							can_scroll(451);
+						}}]);
+						
+					} else if(slide == (block.find('.skw-page').length)) {
+						
+						$('html, body').animate({
+							scrollTop: ($('footer').eq(0).offset().top)
+						}, 777, function(){
+							can_scroll();
+						});
+						
+					} else {
+						
+						event.preventDefault();
+						
+						can_scroll();
+						
+					}
+				} else {
+					
+					//event.preventDefault();
+					
+					can_scroll();
+					
+				}
+				
+				//can_scroll();
+				
+			}
+			
+		});
+		
+		
+		$(document.body).on('click.azbn', '.skw-pages .skw-page__indicators li', {}, function(event){
+			event.preventDefault();
+			
+			var i = $(this).index();
+			
+			$('.skw-pages .skw-page')
+				.filter('.active')
+					.toggleClass('inactive active')
+				.end()
+					.eq(i)
+						.toggleClass('inactive active')
+			;
+			
+			$(this).parent()
+					.find('li')
+						.removeClass('active')
+					.eq(i)
+						.addClass('active')
+			;
+			
+			block.attr('data-slide-id', i);
+			
+		});
+		
+		
+		/*
+		$(document.body).on('keydown.azbn', null, {}, function(event){
+			event.stopPropagation();
+			//event.preventDefault();
+			//event.which
+			
+			//console.log(event.which);
+			
+			if(event.which == 38) { // up
+				event.preventDefault();
+				
+				var diff = 1;
+				
+			} else if(event.which == 40) { // down
+				event.preventDefault();
+				
+				var diff = -1;
+			}
+			
+			if(scrolling) {
+				
+				return;
+				
+			} else {
+				
+				scrolling = true;
+				
+				var slide = parseInt(block.attr('data-slide-id'));
+				
+				var next;
+				
+				if(diff > 0) {
+					if(slide > 0) {
+						next = slide - 1;
+						block.attr('data-slide-id', next);
+						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
+							can_scroll(451);
+						}}]);
+					} else {
+						can_scroll();
+					}
+				} else if(diff < 0) {
+					if(slide < 9) {
+						next = slide + 1;
+						block.attr('data-slide-id', next);
+						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
+							can_scroll(451);
+						}}]);
+					} else {
+						can_scroll();
+					}
+				} else {
+					can_scroll();
+				}
+				
+				//can_scroll();
+				
+			}
+		});
+		*/
+		
+	} else {
+		
+		
+		
+	}
+	
+});
