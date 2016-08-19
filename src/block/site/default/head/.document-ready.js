@@ -33,3 +33,8 @@ $('._czr__anim-indic .anim').hover(
       $(this).removeClass('in').addClass('out');
   }
 );
+
+
+$('.modal').on('shown.bs.modal', function (event) {
+	$('.scroll-container').trigger('init');
+})
