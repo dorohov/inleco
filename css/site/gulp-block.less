@@ -2310,19 +2310,20 @@
 ._czr__index-info{
 	//opacity: @opacity;
 	background: @white;
-	text-align: center;
 	padding:120px 0 60px;
 	@media @media-size-xs{
 	    padding: 90px 0;
 	    font-size: 14px;
 		line-height: 20px;
 	}
-	@media @media-size-sm-p{
-	    padding: 195px 0 240px;
-	}
-	@media @media-size-lg{
-		padding: 175px 0 250px;
-	} 
+	@media @media-size-sm-p{padding: 195px 0 240px;}
+	@media @media-size-lg{padding: 175px 0 250px;} 
+	
+	@media @media-screen{
+		background: url('@{url-path-img}/bg/bg-index-info-left.png') no-repeat left top, url('@{url-path-img}/bg/bg-index-info-right.png') no-repeat right top;
+		background-size: auto 480px;
+	}	
+	@media @media-size-xxl{background-size: auto 100%;}	
 }
 ._czr__ii__heading{
 	margin-bottom: 25px;
@@ -2348,15 +2349,24 @@
 }
 ._czr__ii__note{
 	margin: 0 auto;
-	@media @media-size-sm-p{
+	/*@media @media-size-sm-p{
 		max-width: 630px;
 	}
 	@media @media-size-lg{
 		max-width: 640px;
+	}*/
+	@media @media-screen{max-width: 850px;}
+	@media @media-size-xxl{max-width: 100%;}
+	div, p{		
+		@media @media-screen {text-indent: 60px;}		
 	}
-	@media @media-size-xl{
-		max-width: 640px;
+	div, p, ol, ul{
+		margin-bottom: 20px;
 	}
+	ol, ul{
+		margin-left: 20px;
+	}
+	h1,h2,h3,h4,h5,h6{margin-bottom: 20px; padding-top: 10px;}
 }
 ._czr__index-product{
 	//opacity: @opacity;
@@ -2477,14 +2487,15 @@
 	@media @media-size-sm-l{
 		max-width: 800px;
 	}
+	@media @media-screen{max-width: 800px;}
 	@media @media-size-lg{
 		max-width: 450px;    
 		padding-bottom: 20px;
 	}
 }
 ._czr__ip-note-inner{	
-	border-bottom: 1px solid #5d93a3;
-	padding-bottom: 20px;
+	//border-bottom: 1px solid #5d93a3;
+	//padding-bottom: 20px;
 	margin-bottom: 30px;
 	@media @media-size-xs{ 	
 		font-size: 15px;
@@ -2501,23 +2512,28 @@
 	@media @media-size-lg{
 		padding-bottom: 30px;
 	}
+
+}
+._czr__ip-note-text{
+	div,p{margin-bottom: 10px;}
+	//br{display: none;}
 }
 ._czr__ip-note-heading{
     font-size: 36px;
-    line-height: 48px;
+    line-height: 38px;
     margin-bottom: 15px;
 	@media @media-size-xs{
 		font-size: 24px;
-	    line-height: 36px;
+	    line-height: 26px;
 	    margin-bottom: 5px;
 	}
 	@media @media-size-sm{
 	    font-size: 40px;
-	    line-height: 52px;
+	    line-height: 42px;
 	}
 	@media @media-size-lg{
 		font-size: 30px;
-		line-height: 42px;
+		line-height: 32px;
     	margin-bottom: 10px;
 	}
 }

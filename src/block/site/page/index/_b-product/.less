@@ -117,14 +117,15 @@
 	@media @media-size-sm-l{
 		max-width: 800px;
 	}
+	@media @media-screen{max-width: 800px;}
 	@media @media-size-lg{
 		max-width: 450px;    
 		padding-bottom: 20px;
 	}
 }
 ._czr__ip-note-inner{	
-	border-bottom: 1px solid #5d93a3;
-	padding-bottom: 20px;
+	//border-bottom: 1px solid #5d93a3;
+	//padding-bottom: 20px;
 	margin-bottom: 30px;
 	@media @media-size-xs{ 	
 		font-size: 15px;
@@ -141,23 +142,28 @@
 	@media @media-size-lg{
 		padding-bottom: 30px;
 	}
+
+}
+._czr__ip-note-text{
+	div,p{margin-bottom: 10px;}
+	//br{display: none;}
 }
 ._czr__ip-note-heading{
     font-size: 36px;
-    line-height: 48px;
+    line-height: 38px;
     margin-bottom: 15px;
 	@media @media-size-xs{
 		font-size: 24px;
-	    line-height: 36px;
+	    line-height: 26px;
 	    margin-bottom: 5px;
 	}
 	@media @media-size-sm{
 	    font-size: 40px;
-	    line-height: 52px;
+	    line-height: 42px;
 	}
 	@media @media-size-lg{
 		font-size: 30px;
-		line-height: 42px;
+		line-height: 32px;
     	margin-bottom: 10px;
 	}
 }
