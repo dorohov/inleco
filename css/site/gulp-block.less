@@ -4171,10 +4171,10 @@
 	}
 	.scroll-overflow{
 		height: 100%;
+		overflow: inherit!important;
 		@media @media-size-xs{			
 			width: 100%;
 			height: 100%;
-			overflow: inherit!important;
 		}
 	}
 	.scroll-container.horizontal.bottom{
@@ -4594,7 +4594,54 @@
 		}
 	}
 }
-
+._czr__tptt__owl{
+	position: relative;    
+	width: 525px!important;
+    padding: 0 70px;
+    .owl-nav{
+		div{
+			position: absolute;
+			top: 40%;    
+			transform: translateY(-50%);
+			transition: @transition-site;
+			&:before{
+				font-family: @icon;
+				display: block;
+				border: 2px solid @black;
+				color: @black;
+				text-align: center;
+				border-radius: 50%;
+				font-size: 24px;
+				width: 46px;
+				line-height: 42px;
+				transition: @transition-site;
+				opacity: 0.5;
+				@media @media-size-xs{
+					width: 36px;
+					line-height: 32px;
+					font-size: 16px;
+				}
+			}
+			&:hover{
+				&:before{
+					opacity: 1;
+				}
+			}
+		}
+		.owl-prev{
+			left: 0;
+			&:before{
+				content: @icon-arrow-left;
+			}
+		}
+		.owl-next{
+			right: 0;
+			&:before{
+				content: @icon-arrow-right;
+			}
+		}
+	}
+}
 ._czr__tptt__flex{
 	display: flex;
 	flex-direction: column;
@@ -5728,6 +5775,7 @@
 ._czr__products-item-slider{
 	//opacity: @opacity;
 	background: linear-gradient(-27deg, rgb(223, 242, 248) 22%, rgb(210, 238, 246) 78%);
+	.item{ height: 100%}
 } 
 ._czr__pips__carousel{
 	//background: url('../img/maket/bg-slide2.png') no-repeat left top; 
@@ -5772,6 +5820,7 @@
 	display: flex;
     flex-direction: column;
     justify-content: center;
+    ul, ol{margin: 10px 0px 10px 20px;}
 	@media @media-size-xl{
 		padding-left: 70px;
 	}
@@ -6030,4 +6079,27 @@
   	.active {
 		background-color: rgb(93, 147, 163);
   	}
+}
+
+.mezoniti-kanyuli__row{
+	flex-wrap: wrap;
+	._czr__ip-param{
+		margin-bottom: 20px;
+		&:last-child{margin-bottom: 0}
+	}
+	margin-left: -10px;
+	margin-right: -10px;
+	@media @media-size-xs{
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+.mezoniti-kanyuli__cols{
+	width: 50%;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 20px;
+	@media @media-size-xs{
+		width: 100%;
+	}
 }
