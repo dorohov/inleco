@@ -17,6 +17,7 @@
 			top: 50%;
 			transition: @transition-site; 
 		}
+		/*
 		&.in{
 			&:before{
 				animation-name: andown;
@@ -32,6 +33,26 @@
 				animation-duration: 1.5s;
 				animation-iteration-count: 1;
 			}
+		}*/
+	}
+}
+._czr__list{
+	list-style: none;
+	li{		
+		padding-left: 65px;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 15px;
+		text-decoration: none;
+		&:before{
+			content: '';
+			background-color:  #5d93a3;
+			width: 50px;
+			height: 1px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transition: @transition-site; 
 		}
 	}
 }

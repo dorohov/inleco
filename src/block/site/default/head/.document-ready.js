@@ -17,6 +17,7 @@ $('#getModal2').click(function(){
     setTimeout(function() {$('#modal-timetable').modal('show');}, 500)
     return false;
 });
+/*
 $('._czr__anim-list .anim').hover(
   function(){
     $(this).addClass('in').removeClass('out');
@@ -24,7 +25,7 @@ $('._czr__anim-list .anim').hover(
   function(){   
       $(this).removeClass('in').addClass('out');
   }
-);
+);*/
 $('._czr__anim-indic .anim').hover(
   function(){
     $(this).addClass('in').removeClass('out');
