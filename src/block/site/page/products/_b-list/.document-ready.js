@@ -143,6 +143,41 @@ $(function() {
 	
 	if(block.size() && !screenJS.isXS() && !screenJS.isSM() && !device.mobile() && !device.tablet()) {
 		
+		$(function(){
+			
+			if(SS) {
+				
+				var id = parseInt(SS.get('__skw') || 0);
+				
+				if(id) {
+					
+					block.attr('data-slide-id', id);
+					
+					block
+						.find('.skw-page')
+							.removeClass('active')
+							.addClass('inactive')
+						//.end()
+						.eq(id)
+							.toggleClass('inactive active')
+					;
+					
+					block
+						.find('.skw-page__indicators li')
+							.removeClass('active')
+						//.end()
+						.eq(id)
+							.addClass('active')
+					;
+					
+					//SS.remove('__skw');
+					
+				}
+				
+			}
+			
+		})
+		
 		$(document.body).on('azbn.wheel', '.skw-pages', {}, function(event, obj){
 			event.preventDefault();
 			
@@ -169,6 +204,8 @@ $(function() {
 					.eq(obj.next)
 						.addClass('active')
 				;
+				
+				SS.set('__skw', obj.next);
 				
 			}
 			
@@ -279,6 +316,32 @@ $(function() {
 			block.attr('data-slide-id', i);
 			
 		});
+		
+		$(document.body).on('click.azbn', '.skw-page__control', {}, function(event){
+			event.preventDefault();
+			
+			var btn = $(this);
+			
+			var slide = parseInt(block.attr('data-slide-id'));
+			var next;
+			
+			if(btn.hasClass('prev')) {
+				next = slide - 1;
+				block.attr('data-slide-id', next);
+				block.trigger('azbn.wheel', [{diff:1, next:next, callback:function(){
+					can_scroll(451);
+				}}]);
+			} else if(btn.hasClass('next')) {
+				next = slide + 1;
+				block.attr('data-slide-id', next);
+				block.trigger('azbn.wheel', [{diff:-1, next:next, callback:function(){
+					can_scroll(451);
+				}}]);
+			}
+			
+		});
+		
+		
 		
 		
 		/*
