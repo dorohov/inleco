@@ -341,72 +341,47 @@ $(function() {
 			
 		});
 		
-		
-		
-		
-		/*
-		$(document.body).on('keydown.azbn', null, {}, function(event){
-			event.stopPropagation();
-			//event.preventDefault();
-			//event.which
-			
-			//console.log(event.which);
-			
-			if(event.which == 38) { // up
-				event.preventDefault();
-				
-				var diff = 1;
-				
-			} else if(event.which == 40) { // down
-				event.preventDefault();
-				
-				var diff = -1;
-			}
-			
-			if(scrolling) {
-				
-				return;
-				
-			} else {
-				
-				scrolling = true;
-				
-				var slide = parseInt(block.attr('data-slide-id'));
-				
-				var next;
-				
-				if(diff > 0) {
-					if(slide > 0) {
-						next = slide - 1;
-						block.attr('data-slide-id', next);
-						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
-							can_scroll(451);
-						}}]);
-					} else {
-						can_scroll();
-					}
-				} else if(diff < 0) {
-					if(slide < 9) {
-						next = slide + 1;
-						block.attr('data-slide-id', next);
-						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
-							can_scroll(451);
-						}}]);
-					} else {
-						can_scroll();
-					}
-				} else {
-					can_scroll();
-				}
-				
-				//can_scroll();
-				
-			}
-		});
-		*/
-		
 	} else {
 		
+		
+		$(document.body).on('click.azbn', '.skw-page__control', {}, function(event){
+			event.preventDefault();
+			
+			var btn = $(this);
+			
+			var slide = parseInt(block.attr('data-slide-id'));
+			var next;
+			
+			if(btn.hasClass('prev')) {
+				next = slide - 1;
+			} else if(btn.hasClass('next')) {
+				next = slide + 1;
+			}
+			
+			if(next > -1 && next < block.find('.skw-page').length) {
+				block.attr('data-slide-id', next);
+				block.find('.skw-page.active').eq(0)
+						.removeClass('active')
+						.addClass('inactive')
+					.end()
+					.end()
+					.find('.skw-page').eq(next)
+						.removeClass('inactive')
+						.addClass('active')
+				;
+				
+				block.find('.skw-page__indicators li')
+					.filter('.active')
+						.removeClass('active')
+					.end()
+					.eq(next)
+						.addClass('active')
+				;
+				
+				SS.set('__skw', next);
+			}
+			
+		});
 		
 		
 	}
