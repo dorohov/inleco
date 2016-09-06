@@ -140,9 +140,6 @@ $(function() {
 	*/
 	
 	
-	
-	if(block.size() && !screenJS.isXS() && !screenJS.isSM() && !device.mobile() && !device.tablet()) {
-		
 		$(function(){
 			
 			if(SS) {
@@ -176,7 +173,12 @@ $(function() {
 				
 			}
 			
-		})
+		});
+	
+	
+	if(block.size() && !screenJS.isXS() && !screenJS.isSM() && !device.mobile() && !device.tablet()) {
+		
+		
 		
 		$(document.body).on('azbn.wheel', '.skw-pages', {}, function(event, obj){
 			event.preventDefault();
