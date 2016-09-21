@@ -180,6 +180,8 @@ $(function() {
 		
 		
 		
+		
+		
 		$(document.body).on('azbn.wheel', '.skw-pages', {}, function(event, obj){
 			event.preventDefault();
 			
@@ -215,7 +217,11 @@ $(function() {
 			cb();
 		});
 		
-		$(document.body).on('wheel mousewheel DOMMouseScroll MozMousePixelScroll', '.skw-page', {}, function(event) {
+		
+		
+		
+		
+		$(document.body).on('wheel mousewheel DOMMouseScroll MozMousePixelScroll', '.skw-pages', {}, function(event) {
 			//event.preventDefault();
 			//diff:event.originalEvent.wheelDelta
 			
@@ -265,7 +271,7 @@ $(function() {
 							can_scroll(451);
 						}}]);
 						
-					} else if(slide == (block.find('.skw-page').length)) {
+					} else if(slide == (block.find('.skw-page').length - 1)) {
 						
 						$('html, body').animate({
 							scrollTop: ($('footer').eq(0).offset().top)
@@ -293,6 +299,10 @@ $(function() {
 			}
 			
 		});
+		
+		
+		
+		
 		
 		
 		$(document.body).on('click.azbn', '.skw-pages .skw-page__indicators li', {}, function(event){
