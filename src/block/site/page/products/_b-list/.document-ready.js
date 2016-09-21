@@ -129,7 +129,7 @@ $(function() {
 				
 				block.attr('data-slide-id', next);
 				block.trigger('azbn.wheel', [{diff:0, next:next, callback:function(){
-					can_scroll(451);
+					can_scroll(1000);
 				}}]);
 			})
 			
@@ -180,8 +180,6 @@ $(function() {
 		
 		
 		
-		
-		
 		$(document.body).on('azbn.wheel', '.skw-pages', {}, function(event, obj){
 			event.preventDefault();
 			
@@ -219,9 +217,7 @@ $(function() {
 		
 		
 		
-		
-		
-		$(document.body).on('wheel mousewheel DOMMouseScroll MozMousePixelScroll', '.skw-pages', {}, function(event) {
+		$(document.body).on('wheel mousewheel DOMMouseScroll MozMousePixelScroll', '.skw-page', {}, function(event) {
 			//event.preventDefault();
 			//diff:event.originalEvent.wheelDelta
 			
@@ -237,7 +233,7 @@ $(function() {
 				//$(document.body).trigger('fecss.wheel-block.set', [{diff:event.originalEvent.wheelDelta}]);
 				
 				var diff = (-event.originalEvent.deltaY) || event.originalEvent.detail || event.originalEvent.wheelDelta;
-				//console.log(diff);
+				console.log(diff);
 				var slide = parseInt(block.attr('data-slide-id'));
 				//var now = slide;
 				var next;
@@ -251,7 +247,7 @@ $(function() {
 						next = slide - 1;
 						block.attr('data-slide-id', next);
 						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
-							can_scroll(451);
+							can_scroll(1000);
 						}}]);
 						
 					} else {
@@ -268,7 +264,7 @@ $(function() {
 						next = slide + 1;
 						block.attr('data-slide-id', next);
 						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
-							can_scroll(451);
+							can_scroll(1000);
 						}}]);
 						
 					} else if(slide == (block.find('.skw-page').length - 1)) {
@@ -299,10 +295,6 @@ $(function() {
 			}
 			
 		});
-		
-		
-		
-		
 		
 		
 		$(document.body).on('click.azbn', '.skw-pages .skw-page__indicators li', {}, function(event){
@@ -341,13 +333,13 @@ $(function() {
 				next = slide - 1;
 				block.attr('data-slide-id', next);
 				block.trigger('azbn.wheel', [{diff:1, next:next, callback:function(){
-					can_scroll(451);
+					can_scroll(1000);
 				}}]);
 			} else if(btn.hasClass('next')) {
 				next = slide + 1;
 				block.attr('data-slide-id', next);
 				block.trigger('azbn.wheel', [{diff:-1, next:next, callback:function(){
-					can_scroll(451);
+					can_scroll(1000);
 				}}]);
 			}
 			
