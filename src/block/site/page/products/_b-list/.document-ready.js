@@ -129,7 +129,7 @@ $(function() {
 				
 				block.attr('data-slide-id', next);
 				block.trigger('azbn.wheel', [{diff:0, next:next, callback:function(){
-					can_scroll(1000);
+					can_scroll(1500);
 				}}]);
 			})
 			
@@ -247,7 +247,7 @@ $(function() {
 						next = slide - 1;
 						block.attr('data-slide-id', next);
 						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
-							can_scroll(1000);
+							can_scroll(1500);
 						}}]);
 						
 					} else {
@@ -264,7 +264,7 @@ $(function() {
 						next = slide + 1;
 						block.attr('data-slide-id', next);
 						block.trigger('azbn.wheel', [{diff:diff, next:next, callback:function(){
-							can_scroll(1000);
+							can_scroll(1500);
 						}}]);
 						
 					} else if(slide == (block.find('.skw-page').length - 1)) {
@@ -333,13 +333,13 @@ $(function() {
 				next = slide - 1;
 				block.attr('data-slide-id', next);
 				block.trigger('azbn.wheel', [{diff:1, next:next, callback:function(){
-					can_scroll(1000);
+					can_scroll(1500);
 				}}]);
 			} else if(btn.hasClass('next')) {
 				next = slide + 1;
 				block.attr('data-slide-id', next);
 				block.trigger('azbn.wheel', [{diff:-1, next:next, callback:function(){
-					can_scroll(1000);
+					can_scroll(1500);
 				}}]);
 			}
 			
