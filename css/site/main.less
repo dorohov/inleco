@@ -12,6 +12,9 @@ body {
 	@media @media-size-sm{
 		padding-top: 100px;
 	}
+	&.is--open-navbar {
+		overflow-y: hidden;			
+	}
 }
 a{
 	&[href^="mailto:"],
@@ -135,7 +138,7 @@ a{
     background: rgb(12, 12, 12);
     &.active{
     	display: block;
-    	z-index: 10;
+    	z-index: 100;
     }
 }
 ._czr__preloader-inner{

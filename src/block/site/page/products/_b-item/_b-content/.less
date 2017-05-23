@@ -1,0 +1,243 @@
+.products-item-content{
+	background-color: @white;
+	@media @media-device {
+		padding: 30px 0;
+	}
+	@media @media-screen {
+		padding: 9vw 0;
+	}
+}
+._pic__{
+	&container{
+		@media @media-screen {
+			width: 98vw;
+		}
+		@media @media-size-xxl {
+			max-width: 1650px;
+			width: 89vw;
+		}
+	}
+	&row{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -15px;
+		margin-right: -15px;
+		@media @media-device {
+			margin-top: -35px;
+		}
+		@media @media-screen {
+			margin-top: -7vw;
+		}
+	}
+	&cols{
+		padding-right: 15px;
+		padding-left: 15px;
+		@media @media-device {
+			padding-top: 35px;
+			.makeCols(12, 12);
+		}
+		@media @media-screen {
+			padding-top: 7vw;
+		}
+		&:nth-child(2n+1){
+			@media @media-screen{
+				.makeCols(6, 12);
+			}
+			@media @media-size-md {.makeCols(12, 12);}
+			@media @media-size-xl {
+				.makeCols(5, 12);
+			}
+			@media @media-size-xxl {
+				.makeCols(5, 12);
+			}
+		}
+		&:nth-child(2n+2){
+			@media @media-screen{
+				.makeCols(6, 12);
+			}
+			@media @media-size-md {
+				.makeCols(12, 12);
+			}
+			@media @media-size-xl {
+				.makeColsOffset(1, 12, 15px);
+			}
+			@media @media-size-xxl {
+				.makeColsOffset(1, 12, 15px);
+			}
+		}
+	}
+	&note{
+		font-family: @proxima;
+		position: relative;
+		z-index: 3;
+		.calcFontSize(16, 23, 320, 1680);
+		.calcLineHeight(22, 27, 320, 1680);
+		h1, h2, h3, h4{
+			font-family: @regal-bold;
+		}
+		h1, h2{
+			.calcFontSize(30, 50, 320, 1680);
+			.calcLineHeight(30, 50, 320, 1680);
+			letter-spacing: 1px;
+		}
+		h3, h4{
+			.calcFontSize(24, 44, 320, 1680);
+			.calcLineHeight(24, 44, 320, 1680);
+			margin-bottom: 12px;
+		}
+		* + h3, h4{
+			padding-top: 25px;
+		}
+		p, div{
+			margin-bottom: 10px;
+		}
+		._img{
+			margin-bottom: 35px;
+			img{
+				@media @media-device {
+					margin: 0 auto;
+				}
+			}
+		}
+		* + ._img{
+			padding-top: 25px;
+		}
+		* + .table{
+			padding-top: 20px; 
+		}
+		._table{
+			&.table-responsive{border: 0;}
+			table{
+				font-size: 18px;
+				line-height: 18px;
+				font-family: @proxima-light;
+				color: @black;
+				@media @media-screen {
+					width: 100%;
+				}
+				caption{
+					font-size: 14px;
+					line-height: 14px;
+					padding: 0;
+					color: @black;
+					&.caption-top{
+						caption-side: top;
+						font-family: @proxima-bold;
+					}
+					&.caption-bottom{
+						caption-side: bottom;
+						padding-top: 20px;
+						h1,h2,h3,h4{
+							font-size: 16px;
+							line-height: 20px;
+							padding: 0;
+							margin: 0 0 10px;
+						}
+					}
+				}
+				thead{
+					th, td{
+						font-weight: 400;
+						font-family: @proxima-bold;
+						.calcFontSize(18, 23, 320, 1680);
+						.calcLineHeight(23, 27, 320, 1680); 
+						padding-top: 0;   
+						padding-bottom: 13px;
+    					border-bottom: 3px solid #595959;
+    					span{
+    						font-size: 14px;
+							font-family: @proxima-light;
+    					}
+						&:nth-child(1){
+	    					&[colspan]{
+	    						text-align: left;
+	    					}
+    					}
+					}
+				}
+				td,th{
+					border-bottom: 1px solid #595959;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					padding-right: 15px;
+					padding-left: 15px;
+					vertical-align: middle;
+					&:nth-child(1){
+						font-family: @proxima-bold;
+						padding-left: 0px;
+    					&[colspan]{
+    						text-align: left;
+    					}
+					}
+					&[rowspan="2"] + td + td,
+					&:nth-child(2){
+						text-align: center;
+						color: #5b9516;
+					}
+					&[rowspan="2"] + td + td + td,
+					&:nth-child(3){
+						padding-right: 0px;
+						text-align: right;
+						color: #752f89;
+					}
+					&[colspan]{
+						text-align: center;
+						color: @black;
+					} 
+					&[rowspan="2"] + td{
+						text-align: left;
+						font-family: @proxima-bold;
+						color: @black;
+						padding-left: 0px;
+					} 
+				}
+				&.products{					
+					td,th{
+						&:nth-child(2){
+							text-align: center;
+							color: #5b9516;
+						}
+						&:nth-child(3){
+							text-align: center;
+							color: #7c7c7c;
+						}
+						&:nth-child(4){
+							padding-right: 0px;
+							text-align: right;
+							color: #d70f69;
+						}
+						&[colspan]{
+							text-align: center;
+							color: @black;
+						} 
+					}
+				}
+				&.products2{					
+					td,th{
+						&:nth-child(2){
+							text-align: center;
+							color: #5b9516;
+						}
+						&:nth-child(3){
+							text-align: center;
+							color: #7c7c7c;
+						}
+						&:nth-child(4){
+							color: #d70f69;
+							text-align: center;
+						}
+						&:nth-child(5){
+							padding-right: 0px;
+							text-align: right;
+							color: #752f89;
+						}
+						&[colspan]{
+							text-align: center;
+							color: @black;
+						} 
+					}
+				}
+			}
+		}
+	}
+}

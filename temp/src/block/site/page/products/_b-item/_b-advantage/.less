@@ -1,0 +1,214 @@
+._czr__products-item-advantage{
+	//opacity: @opacity;
+	background: url('@{url-path-img}/products/bg-advantage.png') no-repeat right bottom, url('@{url-path-img}/products/bg-advantage-bottom.png') no-repeat left bottom;
+	background-color: @white;
+	@media @media-size-xs{
+		background: @white url('@{url-path-img}/products/bg-advantage-bottom.png') no-repeat left bottom;    
+		background-size: 700px;
+	}
+	@media @media-size-sm-p{
+		background-position: 380px top, left bottom;
+		background-size: auto 100%, auto;
+	}
+	@media @media-size-sm-l{
+		background-position: 590px top, left bottom;
+		background-size: auto 100%, auto;
+	}
+	@media @media-size-lg{
+		background-size: 650px, auto;
+    	background-position: 141% bottom, left bottom;
+	}
+	@media @media-size-xl1680{ 
+		background-position: 140% 100%,left bottom;
+	}
+	.container{
+		@media @media-size-xs{
+			//padding-left: 0;
+		}
+		@media @media-size-sm-p{
+			width: 730px;    
+			padding-right: 240px;
+		}
+		@media @media-size-sm-l{
+			padding-right: 270px;
+		}
+		@media @media-size-lg{
+			width: 100%;
+			max-width: 1210px;
+		}
+		@media @media-size-xl1660{width: 1600px;}
+		@media @media-size-xl1680{width: 1260px;}
+	}
+} 
+._czr__pipa__carousel{
+	//background: url('../img/maket/bg-slide2.png') no-repeat left top; 
+	@media @media-size-sm-p{
+		padding-bottom: 160px;
+	} 
+	.carousel-inner{
+		height: 768px;
+		.item{
+			height: 100%;
+			max-width:1050px;
+			padding-top: 120px;
+			padding-bottom: 240px;
+		}
+		@media @media-size-xs{
+			height: auto;
+			padding-bottom: 20px;
+			.item{
+				padding-top: 30px;
+				padding-bottom: 0;
+			}
+		}
+		@media @media-size-sm{
+			min-height: 768px;
+			height: auto;
+			.item{
+				padding-top: 70px;
+				padding-bottom: 120px;
+			}
+
+		}
+		@media @media-size-lg{
+			height: 645px;
+		}
+	}
+}
+._czr__pipa__flex{
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+	@media @media-size-xs {
+	    justify-content: flex-start;
+   		flex-direction: row;
+	}
+	@media @media-size-sm {
+		flex-wrap: nowrap;
+	}
+	._cb__flex{flex-wrap: wrap;}
+}
+._czr__pipa__heading{
+	font-size: 48px;
+    line-height: 60px;
+	padding-left: 40px;
+    margin-bottom: 30px;
+	@media @media-size-xs {
+		font-size: 24px;
+	    line-height: 29px;
+	    padding-left: 35px;
+	    margin-bottom: 25px;
+	    br{display: none}
+	}
+	@media @media-size-sm {
+		font-size: 30px;
+	    line-height: 38px;
+	}
+	@media @media-size-lg{
+		font-size: 36px;
+	    line-height: 44px;
+    	margin-bottom: 40px;
+	}
+}
+/*
+._czr__pipa__note-flex{
+	flex-wrap: wrap;
+}*/
+._czr__pipa__list-block{
+	width: 50%;
+	margin-bottom: 45px;
+	@media @media-size-xs {
+		width: 100%;
+		padding-left: 0!important;
+		margin-bottom: 0;
+	}
+}
+/*
+._czr__pipa__list{
+	max-width: 510px;
+	.anim{		
+    	font-size: 18px;
+    	line-height: 28px;
+    	margin-bottom: 8px;
+    	cursor: default;
+    	color: #101010;
+		@media @media-size-xs{
+			font-size: 15px;
+			line-height: 22px;
+			padding-left: 70px;
+			&:before{
+				width: 60px;
+			}
+		}
+		@media @media-size-lg{
+	    	font-size: 15px;
+	    	line-height: 25px;			
+		}
+	}
+	@media @media-size-xs{
+		margin-bottom: 0;
+	}
+	@media @media-size-sm{
+		max-width: 470px;
+		margin-bottom: 0;
+	}
+	@media @media-size-sm-l{
+		max-width: 530px;
+	}
+	@media @media-size-lg{
+		max-width: 450px;
+	}
+}*/
+/*
+._czr__pipa__carousel-indicators {
+    position: absolute;
+    bottom: 145px;
+    left: 20px;
+    z-index: 15;
+    right: 0;
+    list-style: none;
+  	li {
+    	display: inline-block;
+		cursor: pointer;
+		transition: @transition-site;
+		margin: 0 10px;
+    	padding: 0 10px;
+    	text-align: center;
+		font-size: 48px;
+		color: #e6e6e6;
+		position: relative;
+		font-family: @regal-italic;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0%;
+			right: 0%;
+			height: 4px;
+			background: #e6e6e6;
+		}
+		&:hover{
+			color: lighten(#5d93a3, 30%);
+		}
+ 	}
+  	.active {
+		color: #5d93a3;
+		&:before{
+			top: 50%!important;
+			background: #5d93a3;
+			animation: none!important;
+		}
+		&:hover{
+			color: #5d93a3;
+		}
+  	}
+	@media @media-size-xs{
+		bottom: 95px;
+	}
+	@media @media-size-sm{
+		bottom: 40px;
+	}
+	@media @media-size-lg{
+		bottom: 115px;
+	}
+}*/

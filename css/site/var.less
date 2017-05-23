@@ -15,6 +15,7 @@
 @blue: 			#026eae;
 @blue2: 		#0075b9;
 @blue3: 		#0077bf;
+@blue-prod:		#d7f0f7;
 
 @grid_element: 15px;
 @grid_margin: -(@grid_element);
@@ -41,6 +42,7 @@
 @media-device: ~"(max-width: 1024px)";
 @media-notphone: ~"(min-width: 768px)";
 @media-size-md: ~"(min-width: 1025px) and (max-width: 1199px)";
+@media-size-mdl: ~"(min-width: 1025px) and (max-width: 1399px)";
 @media-size-lg: ~"(min-width: 1200px) and (max-width: 1399px)";
 @media-size-xl: ~"(min-width: 1400px)";
 @media-size-xl1680: ~"(min-width: 1400px) and (max-width: 1680px)";
@@ -64,6 +66,20 @@
 @media-screen-5-4-lg: ~'(min-width: 1200px) and (max-width: 1399px) and (aspect-ratio: 5/4)';
 //===================
 
+.calcFontSize(@f-min, @f-max, @v-min, @v-max){
+	font-size: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+.calcLineHeight(@f-min, @f-max, @v-min, @v-max){
+	line-height: ~"calc( (100vw - @{v-min}px) / (@{v-max} - @{v-min}) * (@{f-max} - @{f-min}) + @{f-min}px)";
+}
+.makeCols(@columns, @grid-columns) {
+    width: percentage((@columns / @grid-columns));
+}
+.makeColsOffset(@columns, @grid-columns, @gutter) {
+	//@percentage: percentage((@columns / @grid-columns ));
+    //padding-left: ~"calc(@{percentage} + @{gutter})";
+    margin-left: percentage((@columns / @grid-columns));
+}
 #site {
 	.bi(@img:'') {
 		background-image:url('@{url-path-img}/@{img}');

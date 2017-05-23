@@ -2,6 +2,11 @@
 	//opacity: @opacity;
 	background: lighten(@black, 12.5); //#202020
 	@media @media-device{
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 1030;
 		.navbar-collapse {
 			position: fixed;
 			width: 100%;
@@ -30,6 +35,7 @@
 			overflow: scroll;
     		padding-bottom: 20px;
     		display: block;
+    		height: ~"calc(100% - 58px)";
 		}
 	}
 	@media @media-size-sm{
@@ -39,6 +45,7 @@
 			top: 100px;
 			padding-top: 70px;
 			padding-bottom: 70px;
+    		height: ~"calc(100% - 100px)";
 		}
 	}
 	@media @media-size-sm-l{
@@ -168,13 +175,14 @@
 				}
 			}
 		}
-		> a{
+		> a{ 
 			text-transform: uppercase;
 			font-size: 14px;
 			font-family: @proxima;
 			color: #8f8d8d;
 			padding: 15px 28px;
 			transition: @transition-site;
+			@media @media-size-md{padding: 15px 10px;}
 			&:hover{
 				color: lighten(@black, 80);
 			}

@@ -17,7 +17,9 @@
 <script>
 	$(window).load(function(){
 		$("[data-toggle-nav]").click(function() {
-			var toggle_el = $(this).data("toggle-nav"); 
+			var toggle_el = $(this).data("toggle-nav"), 
+			toggle_body = $(this).data("body");
+			$(toggle_body).toggleClass("is--open-navbar");
 			$(toggle_el).toggleClass("open-sidebar");
 		});
 	})
