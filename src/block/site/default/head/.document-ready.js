@@ -4,6 +4,7 @@ $('.navbar-nav a[href="'+url+'"]').parent().addClass('active');
 
 $('._pic__note img').wrap('<div class="_img"></div>"'); 
 $('._pic__note table').wrap('<div class="_table table-responsive"></div>"').addClass("table");
+$('.skw-page__description-note table').addClass("products table");
 
 $('._czr__in__modal-nav a[href="'+url+'"]').parent().addClass('active'); 
 $('._fs__navbar a[href="'+url+'"]').parent().addClass('active'); 
