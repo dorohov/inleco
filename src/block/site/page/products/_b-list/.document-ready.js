@@ -146,6 +146,12 @@ $(function() {
 				
 				var id = parseInt(SS.get('__skw') || 0);
 				
+				var _id = block.attr('data-start-from') || '';
+				
+				if(_id != '') {
+					id = parseInt(_id);
+				}
+				
 				if(id) {
 					
 					block.attr('data-slide-id', id);
