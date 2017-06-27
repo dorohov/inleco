@@ -2,7 +2,8 @@
 	overflow: hidden;
 	position: relative;
 	height: 90vh; 
-	._czr__btn-pub{    
+	._czr__btn-pub{ 
+		display: none;   
 		left: -211px;
     	padding: 120px 0 0;
     	width: 440px;
@@ -106,6 +107,7 @@
     	&.center{
 			align-items: center;
     		background-color: @black;
+    		@media @media-screen {padding: 60px;}
     	}
 	}
 	@media @media-device{
@@ -124,6 +126,7 @@
 	@media @media-size-sm{
 		img{
 			max-height: 550px;
+		    max-height: 400px;
 		}
 	}
 	@media @media-size-sm-l{
