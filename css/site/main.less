@@ -103,6 +103,26 @@ a{
 		width: 100%;
 	}
 }
+.makeCols(@columns, @grid-columns) {
+    width: percentage((@columns / @grid-columns));
+}
+.row-flex{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.cols-flex{
+	padding-right: 15px;
+	padding-left: 15px;
+	&.is--cols-3{
+		@media @media-size-xs-p {.makeCols(12, 12); }
+		@media @media-size-xs-l {.makeCols(6, 12);}
+		@media @media-size-sm {.makeCols(6, 12);}
+		@media @media-screen {.makeCols(4, 12);}
+	}
+}
+
 .scroll-hide{
 	width:600px;
 	height:320px;
