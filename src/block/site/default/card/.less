@@ -15,6 +15,20 @@
 				margin-bottom: 3vw;
 			}
 		}
+		&.is--video{
+			max-width: 480px;
+			margin-bottom: 40px;
+			@media @media-screen {
+				margin-bottom: 3vw;
+			}
+		}
+		&.is--gallery{
+			max-width: 480px;
+			margin-bottom: 40px;
+			@media @media-screen {
+				margin-bottom: 3vw;
+			}
+		}
 		&.is--coach{
 			max-width: 380px;
 		}
@@ -84,5 +98,10 @@
 		line-height: 20px;
 		color: @b-color-a;
 		span{font-family: @proxima-bold;}
+	}
+	&btn{
+		.card-item__heading + &{
+			padding-top: 10px;
+		}
 	}
 }

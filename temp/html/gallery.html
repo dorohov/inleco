@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[snp tpl="src/block/site/default/head/.html" ] 
+	</head>
+	<body>	
+		
+		[snp tpl="src/block/site/default/navbar/.html" class="navbar-site _czr__navbar-site" ]
+
+		[snp tpl="src/block/site/page/gallery/.html" class="gallery-page content-block _czr__gallery-page bg-gallery _czr__resize" ]
+
+		[snp tpl="src/block/site/default/footer/.html" class="footer-site" ]
+
+		[snp tpl="src/block/site/default/modal/gallery.html" class="modal-site _czr__modal-gallery" ]
+
+		[snp tpl="src/block/site/default/head/script.html" ]
+		<link rel="stylesheet" href="/plugins/owl.carousel/owl.carousel.css">
+		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
+		<script >
+			$(document).ready(function() {
+				if (device.tablet()) {
+					$('._czr__gp__owl-item').css('width', 630);
+					$('._czr__gp__owl').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 90,
+						nav:false,
+					    items:1
+					});
+				}
+				if (device.mobile()) {
+					$('._czr__gp__owl-item').css('width', 260);
+					$('._czr__gp__owl').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 30,
+						nav:false,
+					    items:1
+					});
+				}
+			});
+		</script>
+	</body>
+</html> 
