@@ -1,0 +1,46 @@
+<div class="{page_prefix}heading-block">
+	<div class="{page_prefix}heading-cols">
+		<h1 class="{page_prefix}heading">{block_heading}</h1>
+		<span class="{page_prefix}heading-line"></span>
+	</div>
+</div>	
+<div class="{page_prefix}container">
+	<ul class="{page_prefix}filter-block">
+		<li class="{page_prefix}filter-item">
+			<a href="#" class="{page_prefix}filter-link  is--active">Семинары месяца</a>
+		</li>
+		<li class="{page_prefix}filter-item">
+			<a href="#" class="{page_prefix}filter-link">Семинары следующего месяца</a>
+		</li>
+		<li class="{page_prefix}filter-item">
+			<a href="#" class="{page_prefix}filter-link">Семинары в регионах</a>
+		</li>
+		<li class="{page_prefix}filter-item  is--visible-device">
+			<a href="#" class="{page_prefix}filter-link" data-toggle="collapse" data-target="#datepicker">Выбрать по дате</a>
+		</li>
+	</ul>
+	<div class="{page_prefix}row  {page_mod}  is--wrap  is--gutter">
+		<div class="{page_prefix}cols  is--cols-3  {page_mod}">
+			<div class="{page_prefix}datepicker-collapse collapse" id="datepicker">
+				<div class="{page_prefix}datepicker">
+					<div class="{page_prefix}datepicker-input" data-plugin="datepicker">
+					</div>
+					<div class="{page_prefix}datepicker-container"></div>
+					<ul class="{page_prefix}datepicker-legend">
+						<li class="{page_prefix}datepicker-legend-item  is--msk">Семенары в Москве</li>
+						<li class="{page_prefix}datepicker-legend-item  is--region">Семенары в регионах</li>
+						<li class="{page_prefix}datepicker-legend-item  is--msk-region">Семенары в Москве и регионах</li>
+					</ul>
+				</div> 
+			</div> 
+		</div>
+		<div class="{page_prefix}cols  is--cols-9  {page_mod}">
+			[snp 
+				tpl="src/block/site/default/card/panel-training.html" 
+				block_prefix="card-block__"
+				page_prefix="content-block__"  
+				page_mod="is--training-panel"  
+			]
+		</div>
+	</div>
+</div>

@@ -17,11 +17,18 @@
 @blue3: 		#0077bf;
 @blue-prod:		#d7f0f7;
 
+@b-color-a:    @color-line;
 @grid_element: 15px;
 @grid_margin: -(@grid_element);
 @grid_padding: @grid_element;
 
+
+@color-msk 			: 	#bf2ac8;
+@color-region 		: 	#5e7dbb;
+@color-msk-region 	: 	#5f970e;
+
 @transition-site: all 0.3s ease;
+@trs-site: all .3s ease;
 @media-size-xs: ~"(max-width: 767px)";
 @media-size-xs-4: ~"(max-width: 320px) and (max-height: 480px)";
 @media-size-xs-4-l: ~"(max-width: 480px) and (max-height: 320px) and (orientation:landscape)";
@@ -39,8 +46,13 @@
 @media-size-sm-l: ~"(min-width: 768px) and (max-width: 1024px) and (orientation:landscape)";
 
 @media-screen: ~"(min-width: 1025px)";
+@media-screen-lg: ~"(min-width: 1200px)";
+@media-screen-xl: ~"(min-width: 1400px)";
 @media-device: ~"(max-width: 1024px)";
+@media-device-lg: ~"(max-width: 1199px)";
+@media-notsmart: ~"(min-width: 768px)";
 @media-notphone: ~"(min-width: 768px)";
+@media-size-smd: ~"(min-width: 768px) and (max-width: 1199px)";
 @media-size-md: ~"(min-width: 1025px) and (max-width: 1199px)";
 @media-size-mdl: ~"(min-width: 1025px) and (max-width: 1399px)";
 @media-size-lg: ~"(min-width: 1200px) and (max-width: 1399px)";
@@ -79,6 +91,11 @@
 	//@percentage: percentage((@columns / @grid-columns ));
     //padding-left: ~"calc(@{percentage} + @{gutter})";
     margin-left: percentage((@columns / @grid-columns));
+}
+
+.makeCols(@columns, @grid-columns) {
+    flex-basis: percentage((@columns / @grid-columns));
+    max-width: percentage((@columns / @grid-columns));
 }
 #site {
 	.bi(@img:'') {

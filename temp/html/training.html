@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[snp tpl="src/block/site/default/head/.html" ] 
+	</head>
+	<body>	
+		
+		[snp tpl="src/block/site/default/navbar/.html" class="navbar-site _czr__navbar-site" ]
+
+		[snp tpl="8src/block/site/page/training/_b-training/.html" class="training-page content-block _czr__training-page bg-training _czr__resize" ]
+
+		[snp 
+			tpl="src/block/site/page/training/page.html" 
+			block_prefix="  " 
+			page_prefix="content-block__" 
+			page_mod="is--training" 
+			block_heading="Расписание занятий"
+		]
+		[snp 
+			tpl="8/src/block/site/page/training/_b-timetable/.html" 
+			class="timetable-page content-block _czr__timetable-page bg-training  " 
+		]
+
+		[snp tpl="8/src/block/site/page/training/_b-coach/.html" class="coach-page content-block _czr__coach-page bg-coach " ]
+
+		
+		[snp tpl="src/block/site/default/footer/.html" class="footer-site" ]
+		
+		[snp tpl="src/block/site/default/modal/coach.html" class="modal-site _czr__modal-coach" ]
+		
+		[snp tpl="src/block/site/default/modal/timetable.html" class="modal-site _czr__modal-timetable" ]
+		
+		[snp tpl="src/block/site/default/modal/timetable-reviews.html" class="modal-site _czr__modal-timetable-rev" ]
+
+		[snp tpl="src/block/site/default/head/script.html" ]
+		<link rel="stylesheet" href="/plugins/owl.carousel/owl.carousel.css">
+		<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>
+		<script >
+			$(document).ready(function() {
+				if (device.mobile()) {
+					$('._czr__tpc__item-flex ._czr__tpc__item').css('width', 230);
+					$('._czr__tpc__item-flex').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 0,
+						nav:false,
+					    items:1
+					});
+					$('._czr__tptt__item-flex ._czr__tptt__item').css('width', 230);
+					$('._czr__tptt__item-flex').addClass('owl-carousel').owlCarousel({
+						autoWidth:true,
+						margin: 0,
+						nav:false,
+					    items:1
+					});
+				}		
+				$('._czr__tptt__owl').owlCarousel({
+				  margin: 35,
+				  navText: [],
+				  nav: true,
+				  dots: false,
+				  smartSpeed: 500,
+				  items:1
+				   
+				}); 		
+			});
+		</script>
+	</body>
+</html> 
