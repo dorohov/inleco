@@ -1,6 +1,6 @@
-$('[data-plugin="datepicker"]').datepicker({
+/*$('[data-plugin="datepicker"]').datepicker({
 	inline: true,
-})
+})*/
 /*$('[data-plugin="datepicker"]').datepicker({
 	language : 'ru-RU',
 	inline: true,
